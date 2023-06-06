@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { faBars, faClose } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router'
 
 @Component({
   selector: 'app-root',
@@ -14,12 +15,17 @@ export class AppComponent {
 
   menuOpen: boolean = false
 
-  constructor(){
+  constructor(private router: Router){
 
   }
 
   toggleMenu(){
     this.menuOpen = !this.menuOpen
+  }
+
+  jump(fragment:any){
+    console.log(fragment)
+    this.router.navigateByUrl('/#'+fragment)
   }
 
 

@@ -1,35 +1,44 @@
-<header>
-  <nav>
-    <div class="logo">
-      <h2>Logo</h2>
-    </div>
-    <ul [ngClass]="menuOpen ? 'open' : '' ">
-      <li>Home</li>
-      <li>Rólam</li>
-      <li>Portfólió</li>
-      <li>Kapcsolat</li>
-    </ul>
-    <div class="menu-toggle">
-      <fa-icon *ngIf="!menuOpen" [icon]="faBars" (click)="toggleMenu()"></fa-icon>
-      <fa-icon *ngIf="menuOpen" [icon]="faClose" (click)="toggleMenu()"></fa-icon>
-    </div>
-  </nav>
-</header>
-
-<section class="hero">
-  <div class="container"></div>
+<section  id="hero" class="hero">
+  <header [ngClass]="menuOpen ? 'open' : '' ">
+    
+      <nav>
+        <div class="logo">
+          <h2>Logo</h2>
+        </div>
+        <ul  [ngClass]="menuOpen ? 'open' : '' ">
+          <li><a (click)="jump('hero')" >Home</a></li>
+          <li><a (click)="jump('about')" >Rólam</a></li>
+          <li><a (click)="jump('portfolio')">Portfólió</a></li>
+          <li><a (click)="jump('contact')">Kapcsolat</a></li>
+        </ul>
+        <div class="menu-toggle">
+          <fa-icon *ngIf="!menuOpen" [icon]="faBars" (click)="toggleMenu()"></fa-icon>
+          <fa-icon *ngIf="menuOpen" [icon]="faClose" (click)="toggleMenu()"></fa-icon>
+        </div>
+      </nav>
+ 
+  </header>
+  <div class="container">
+    <h1>Hero</h1>
+  </div>
 </section>
 
-<section class="about">
-  <div class="container"></div>
+<section   id="about" class="about">
+  <div class="container">
+    <h1>Rólam</h1>
+  </div>
 </section>
 
-<section class="portfolio">
-  <div class="container"></div>
+<section  id="portfolio" class="portfolio">
+  <div class="container">
+    <h1>Portfólió</h1>
+  </div>
 </section>
 
-<section class="contact">
-  <div class="container"></div>
+<section id="contact" class="contact">
+  <div class="container">
+    <h1>Kapcsolat</h1>
+  </div>
 </section>
 
 <footer>

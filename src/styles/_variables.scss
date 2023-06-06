@@ -5,6 +5,7 @@ $l-gradient-3: #23d3d928;
 $l-primary: #587cde;
 $l-color: #23d3d9;
 $l-bg: #fff;
+$l-open-nav: #587cde;
 
 //Dark theme
 $d-gradient-1: #000;
@@ -13,18 +14,21 @@ $d-gradient-3: #2f2e2e;
 $d-primary: #fff;
 $d-color: #fe2c5d;
 $d-bg: #000;
+$d-open-nav: #000;
 
 @mixin light(){
     --gradient: #{linear-gradient(110deg, $l-gradient-1, $l-gradient-2, $l-gradient-3)};
     --primary: #{$l-primary};
     --color: #{$l-color};
     --bg: #{$l-bg};
+    --nav-bg: #{$l-open-nav};
 }
 @mixin dark(){
     --gradient: #{linear-gradient(110deg, $d-gradient-1, $d-gradient-2, $d-gradient-3)};
     --primary: #{$d-primary};
     --color: #{$d-color};
     --bg: #{$d-bg};
+    --nav-bg: #{$d-open-nav};
 }
 
 body{
