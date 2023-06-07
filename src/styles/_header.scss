@@ -68,8 +68,15 @@ header {
         }
 
     }
+
+    nav.scroll {
+        background: var(--gradient);
+        backdrop-filter: blur(60px);
+    }
 }
 
 header.open {
     color: #fff;
 }
+
+

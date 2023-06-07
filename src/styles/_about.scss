@@ -1,0 +1,41 @@
+.side-flex-container {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: stretch;
+    gap: 2rem;
+
+    .side-menu {
+        
+        button {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            width: 100%;
+            padding: 1rem;
+            font-size: 1rem;
+            outline: none;
+            border: none;
+            background: var(--color-alpha);
+            color: var(--gradient);
+            margin-bottom: .5rem;
+            cursor: pointer;
+
+            &.active {
+                background: var(--gradient);
+                border: none;
+            }
+
+            span {
+                display: none;
+
+                @media screen and (min-width: 900px){
+                    display: block;
+                }
+            };
+        }
+
+
+
+    }
+}

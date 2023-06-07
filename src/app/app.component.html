@@ -1,9 +1,9 @@
 <section  id="hero" class="hero">
-  <header [ngClass]="menuOpen ? 'open' : '' ">
+  <header [ngClass]="menuOpen ? 'open' : '' " >
     
-      <nav>
+      <nav (scroll)="onWindowScroll()">
         <div class="logo">
-          <h2>Logo</h2>
+          <h1>Logo</h1>
         </div>
         <ul  [ngClass]="menuOpen ? 'open' : '' ">
           <li><a (click)="jump('hero')" >Home</a></li>
@@ -19,25 +19,76 @@
  
   </header>
   <div class="container">
-    <h1>Hero</h1>
+    <h2>Hero</h2>
   </div>
 </section>
 
 <section   id="about" class="about">
   <div class="container">
-    <h1>Rólam</h1>
+    <h2>Rólam</h2>
+    <div class="side-flex-container">
+
+      <div class="side-menu">
+        <button [ngClass]="isAbout ? 'active' : '' " (click)="toggleAboutMenu('isAbout')">
+          <fa-icon [icon]="faUserSecret" ></fa-icon>
+          <span class="button-text">Pályám</span>
+        </button>
+        <button [ngClass]="isStudies ? 'active' : '' " (click)="toggleAboutMenu('isStudies')">
+          <fa-icon [icon]="faGraduationCap" ></fa-icon>
+          <span class="button-text">Tanulmányok</span>
+        </button>
+        <button [ngClass]="isExperience ? 'active' : '' " (click)="toggleAboutMenu('isExperience')">
+          <fa-icon [icon]="faMagicWandSparkles" ></fa-icon>
+          <span class="button-text">Munkáim</span>
+        </button>
+        <button [ngClass]="isLanguages ? 'active' : '' " (click)="toggleAboutMenu('isLanguages')">
+          <fa-icon [icon]="faLanguage" ></fa-icon>
+          <span class="button-text">Nyelvtudás</span>
+        </button>
+      </div>
+
+      <div class="right-text">
+
+        <div  *ngIf="isAbout">
+          <h3>Pályám</h3>
+          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+          </p>
+        </div>
+        <div *ngIf="isStudies" >
+          <h3>Tanulmányok</h3>
+          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+          </p>
+        </div>
+        <div *ngIf="isExperience" >
+          <h3>Munkáim</h3>
+          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+          </p>
+        </div>
+        <div *ngIf="isLanguages" >
+          <h3>Nyelvtudás</h3>
+          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
   </div>
 </section>
 
 <section  id="portfolio" class="portfolio">
   <div class="container">
-    <h1>Portfólió</h1>
+    <h2>Portfólió</h2>
   </div>
 </section>
 
 <section id="contact" class="contact">
   <div class="container">
-    <h1>Kapcsolat</h1>
+    <h2>Kapcsolat</h2>
   </div>
 </section>
 
