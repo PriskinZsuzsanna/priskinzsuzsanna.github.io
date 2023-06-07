@@ -3,6 +3,7 @@ $l-gradient-1: #93f6fb69;
 $l-gradient-2: #587cde62;
 $l-gradient-3: #23d3d928;
 $l-primary: #587cde;
+$l-primary-alpha: #587cde9c;
 $l-color: #23d3d9;
 $l-color-alpha: #23d3d927;
 $l-bg: #fff;
@@ -14,7 +15,7 @@ $d-gradient-2: #241e1e;
 $d-gradient-3: #2f2e2e;
 $d-primary: #fff;
 $d-color: #fe2c5d;
-$d-color-alpha: #fe2c5d3e;
+$d-primary-alpha: #fe2c5d3e;
 $d-bg: #000;
 $d-open-nav: #000;
 
@@ -24,7 +25,7 @@ $d-open-nav: #000;
     --color: #{$l-color};
     --bg: #{$l-bg};
     --nav-bg: #{$l-open-nav};
-    --color-alpha: #{$l-color-alpha};
+    --primary-alpha: #{$l-primary-alpha};
 }
 @mixin dark(){
     --gradient: #{linear-gradient(110deg, $d-gradient-1, $d-gradient-2, $d-gradient-3)};
@@ -32,7 +33,7 @@ $d-open-nav: #000;
     --color: #{$d-color};
     --bg: #{$d-bg};
     --nav-bg: #{$d-open-nav};
-    --color-alpha: #{$d-color-alpha};
+    --primary-alpha: #{$d-primary-alpha};
 }
 
 body{

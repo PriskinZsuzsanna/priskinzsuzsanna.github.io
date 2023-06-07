@@ -31,7 +31,7 @@
       <div class="side-menu">
         <button [ngClass]="isAbout ? 'active' : '' " (click)="toggleAboutMenu('isAbout')">
           <fa-icon [icon]="faUserSecret" ></fa-icon>
-          <span class="button-text">Pályám</span>
+          <span class="button-text">Rólam</span>
         </button>
         <button [ngClass]="isStudies ? 'active' : '' " (click)="toggleAboutMenu('isStudies')">
           <fa-icon [icon]="faGraduationCap" ></fa-icon>
@@ -39,7 +39,7 @@
         </button>
         <button [ngClass]="isExperience ? 'active' : '' " (click)="toggleAboutMenu('isExperience')">
           <fa-icon [icon]="faMagicWandSparkles" ></fa-icon>
-          <span class="button-text">Munkáim</span>
+          <span class="button-text">Tapasztalat</span>
         </button>
         <button [ngClass]="isLanguages ? 'active' : '' " (click)="toggleAboutMenu('isLanguages')">
           <fa-icon [icon]="faLanguage" ></fa-icon>
@@ -52,7 +52,8 @@
         <div  *ngIf="isAbout">
           <h3>Pályám</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a javascript és a css világa.
+            
           </p>
         </div>
         <div *ngIf="isStudies" >

@@ -50,6 +50,7 @@ export class AppComponent {
   jump(fragment:any){
     console.log(fragment)
     this.router.navigateByUrl('/#'+fragment)
+    this.toggleMenu()
   }
 
   toggleAboutMenu(button: string){

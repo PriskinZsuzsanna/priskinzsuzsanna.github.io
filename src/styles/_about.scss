@@ -1,41 +1,100 @@
 .side-flex-container {
     width: 100%;
-    display: flex;
-    justify-content: flex-start;
-    align-items: stretch;
-    gap: 2rem;
+    display: block;
+
+    @media screen and (min-width: 700px) {
+       display: flex;
+       justify-content: flex-start;
+       align-items: stretch;
+       gap: 2rem;
+    }
+
 
     .side-menu {
-        
+
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+
+        @media screen and (min-width: 700px) {
+            display: block;
+        }
+
         button {
-            display: flex;
-            align-items: center;
-            gap: 1rem;
-            width: 100%;
+            width: 23%;
             padding: 1rem;
             font-size: 1rem;
             outline: none;
-            border: none;
-            background: var(--color-alpha);
-            color: var(--gradient);
+            background: none;
+            border: 1px solid var(--primary-alpha);
+            color: var(--primary-alpha);
             margin-bottom: .5rem;
+            font-weight: 500;
             cursor: pointer;
+
+            @media screen and (min-width: 700px) {
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            @media screen and (min-width: 900px) {
+                padding: 1rem 2rem 1rem 1rem;
+                justify-content: flex-start;
+                align-items: center;
+                gap: 1rem;
+            }
 
             &.active {
                 background: var(--gradient);
                 border: none;
+                color: #fff;
+
+                fa-icon {
+                    color: #fff;
+                }
+            }
+
+            fa-icon {
+                align-self: center;
+                font-size: 1.2rem;
+                color: var(--primary-alpha);
             }
 
             span {
                 display: none;
 
-                @media screen and (min-width: 900px){
+                @media screen and (min-width: 900px) {
                     display: block;
                 }
-            };
+            }
         }
 
+        button:nth(:last-of-type) {
+            margin-bottom: 0;
+        }
+    }
 
+    .right-text {
+        padding: 1.5rem;
 
+        @media screen and (min-width: 700px) {
+           padding-top: .5rem;
+        }
+
+        h3 {
+            display: inline-block;
+            position: relative;
+        }
+
+        h3::after {
+            content: '';
+            position: absolute;
+            width: 120%;
+            height: 4px;
+            background: var(--gradient);
+            left: 0;
+            bottom: - .4rem;
+        }
     }
 }
