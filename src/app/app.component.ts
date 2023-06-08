@@ -2,6 +2,11 @@ import { Component, HostListener } from '@angular/core';
 import { faBars, faClose, faUserSecret, faGraduationCap, faMagicWandSparkles, faLanguage, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { Router } from '@angular/router'
+import { PORTFOLIO } from './portfolio';
+import { PortfolioItem } from './portfolio-item';
+import { Inject } from '@angular/core';
+import { DOCUMENT } from '@angular/common';
+
 
 
 @Component({
@@ -11,6 +16,8 @@ import { Router } from '@angular/router'
 })
 export class AppComponent {
   title = 'priskin-site';
+  portfolio: Array<PortfolioItem> = PORTFOLIO
+  actual: PortfolioItem = new PortfolioItem ()
 
   faBars = faBars
   faClose = faClose
@@ -31,11 +38,11 @@ export class AppComponent {
   isOpenPopup: boolean = false;
 
   
-  constructor(private router: Router){
+  constructor(private router: Router, @Inject(DOCUMENT) private document: Document ){
     
   }
 
-  @HostListener("window:scroll", []) onWindowScroll() {
+  @HostListener("window:scroll", []) onWindowScroll(){
     // do some stuff here when the window is scrolled
     let element = document.querySelector('nav') as HTMLElement;
     if (window.pageYOffset > element.clientHeight) {
@@ -75,9 +82,30 @@ export class AppComponent {
     }
   }
 
-  toggleOpenPopup(){
-    this.isOpenPopup = !this.isOpenPopup
+  OpenPopup(item:PortfolioItem){
+    this.actual = item
+    this.togglePortfolioPopup()
+    this.portfolioDetails(this.actual)
+    let pp:any = this.document.querySelector('.portfolio-popup')
+    pp.scrollTo(0, 0)
   }
+
+  togglePortfolioPopup(){
+    this.isOpenPopup = !this.isOpenPopup
+    this.document.body.classList.toggle('body-fade-out');
+ 
+  }
+  
+
+  portfolioDetails(actual:PortfolioItem){
+    console.log(actual)
+    
+  }
+
+  /*scroll(e:any){
+    console.log(e.target)
+    e.target.parentElement.scrollTo(0, 0)
+  }*/
 
   
 

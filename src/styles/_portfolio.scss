@@ -9,11 +9,12 @@
         }
         .portfolio-item {
             width: 100%;
-            margin: 0 15px 30px;
+            margin-block: 0 30px;
             display: flex;
             flex-direction: column;
             align-items: center;
             justify-content: space-between;
+            position: relative;
         }
         
         .portfolio-item h3 {
@@ -43,169 +44,168 @@
             cursor: pointer;
             transition: all .5s ease-in-out;
         }
-        
-        .portfolio-item-thumbnail:hover a {
-            translate: 0 0;
-            opacity: 1;
-        }
-        
-        .portfolio-item-thumbnail img {
-            width: 100%;
-            border-radius: 10px;
-            pointer-events: none;
-        }
-        
-        .portfolio-item h3 {
-            font-size: 20px;
-            text-transform: capitalize;
-            margin: 20px 0 0;
-            text-align: center;
-        }
-        
-        .portfolio-item-details {
-            display: none;
-        }
-    }
-
-    .portfolio-popup {
-        position: fixed;
-        left: 0;
-        top: 0;
-        height: auto;
-        min-height: 100vh;
-        width: 100%;
-        z-index: 200;
-        visibility: hidden;
-        overflow-y: initial;
-        overflow-x: auto;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        justify-content: space-evenly;
-        z-index: 1000;
     }
     
-    .portfolio-popup.open {
-        visibility: visible;
-        overflow-y: auto;
-        overflow-x: auto;
-    }
-    
-    .pp-inner {
-        height: 100vh;
-        padding: 40px;
-        margin-top: 2rem;
-        color: #fff;
-        border-radius: 20px;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        overflow-y: auto;
-    }
-    
-    .pp-content {
-        padding: 30px;
-        background: var(--gradient);
-        border-radius: 30px;
-        max-width: 600px;
-        width: auto;
-        opacity: 0;
-        margin-block: 50px 5%;
-        transform: scale(0.9);
-    }
-    
-    .portfolio-popup.open .pp-content {
+    .portfolio-item-thumbnail:hover a {
+        translate: 0 0;
         opacity: 1;
-        transform: scale(1);
-        transition: all 0.5s ease;
     }
     
-    .pp-header {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-    }
-    
-    .pp-header {
-        position: relative;
-    }
-    
-    .pp-header .btn {
-        height: 40px;
-        width: 40px;
-        padding: 0;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: absolute;
-        right: -40px;
-        top: -40px;
-    }
-    
-    .pp-thumbnail img {
+    .portfolio-item-thumbnail img {
+        width: 100%;
         border-radius: 10px;
         pointer-events: none;
     }
     
-    .pp-header h3 {
-        font-size: 25px;
+    .portfolio-item h3 {
+        font-size: 20px;
         text-transform: capitalize;
-        margin: 20px 0 15px;
+        margin: 20px 0 0;
         text-align: center;
-        color: #fff;
     }
     
-    .pp-body .description {
-        margin-bottom: 20px;
-        text-align: justify;
+    .portfolio-item-details {
+        display: none;
+    }
+}
+
+
+
+.portfolio-popup {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 200;
+    /*
+    height: auto;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-evenly;
+    z-index: 1000;
+    visibility: visible;
+    overflow-y: auto;
+    overflow-x: auto;
+    */
+    backdrop-filter: blur(10px);
+
+    .pp-inner {
+        width: 100%;
+        height: 100vh;
+        overflow-x: auto; //!
+        padding: 20px;
+        color: #fff;
+        border-radius: 20px;
+        margin-inline: auto;
         display: flex;
         flex-direction: column;
         align-items: center;
-        justify-content: space-between;
-        gap: 25px;
+        justify-content: flex-start;
+
+        @media screen and (min-width: 700px) {
+            justify-content: center;
+        }
+
+        .pp-content {
+            padding: 1rem;
+            background: var(--gradient);
+            border-radius: 30px;
+            max-width: 600px;
+            width: auto;
+            height: auto;
+            opacity: 1;
+            margin-block: 1rem 5%;
+
+            .pp-header {
+                position: relative;
+
+                .pp-close {
+                    height: 40px;
+                    width: 40px;
+                    padding: 0;
+                    position: absolute;
+                    right: -2rem;
+                    top: -3rem;
+                    color: #fff;
+                    border: none;
+                    box-shadow: 1px 2px 3px #fff;
+                    font-size: 1rem;
+                }
+
+                .pp-thumbnail img {
+                    border-radius: 10px;
+                    pointer-events: none;
+                }
+
+                h3 {
+                    font-size: 25px;
+                    text-transform: capitalize;
+                    margin-block: 1rem .7rem;
+                    text-align: center;
+                    color: #fff;
+                }
+
+               
+            }
+            
+            .pp-body {
+                .description {
+                    width: 100%;
+                    margin-bottom: 1rem;
+
+                    h3, p {
+                        text-align: center;
+                        color: #fff;
+                    }
+
+                    p {
+                        text-transform: uppercase;
+                    }
+
+                    .skills {
+                        display: flex;
+                        flex-wrap: wrap;
+                        justify-content: center;
+                        gap: 0.5rem;
+
+                        .skill-item{
+                            padding: 0.5rem 3rem;
+                            border: 1px solid #fff;
+                            text-align: center;
+                            border-radius: 50px;
+                            transition: all .3s ease-in-out;
+                        }
+
+                    }
+
+                    .link {
+                       width: 100%;
+                       display: flex;
+                       justify-content: center;
+                       margin-block: 1.2rem;
+
+                        a {
+                            text-transform: lowercase;
+                            color: #fff;
+                            padding: .8rem 3rem;
+                            border-radius: 2rem;
+                            background: var(--gradient);
+                            scale: 1;
+                            transition: all .3s ease-in-out;
+                        }
+                        a:hover {
+                            scale: 1.05;
+                        }
+                        
+                    }
+
+                }
+            }
+          
+        }
     }
-    
-    .pp-body .description .skills {
-        display: flex;
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 0.5rem;
-    }
-    
-    .skill-item {
-        color: var(--white);
-        padding: 0.5rem 3rem;
-        border: 1px solid var(--white);
-        text-align: center;
-        border-radius: 50px;
-        transition: all .3s ease-in-out;
-    }
-    
-    .skill-item:hover {
-        background: #fff;
-        color: var(--primary);
-        scale: 1.05;
-        border: 1px solid #fff;
-    }
-    
-    
-    .description h3 {
-        text-align: center;
-        color: #fff;
-    }
-    
-    .pp-body a {
-        text-transform: lowercase;
-    }
-    
-    .pp-body a:hover {
-        color: #fff;
-        font-weight: 400;
-    }
-    
-    .pp-body a:hover {
-        border: 1px solid #fff;
-    }
-    
+
 }
+
