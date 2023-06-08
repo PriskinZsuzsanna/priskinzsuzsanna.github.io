@@ -1,77 +1,83 @@
-<section  id="hero" class="hero">
-  <header [ngClass]="menuOpen ? 'open' : '' " >
-    
-      <nav (scroll)="onWindowScroll()">
-        <div class="logo">
-          <h1>Logo</h1>
-        </div>
-        <ul  [ngClass]="menuOpen ? 'open' : '' ">
-          <li><a (click)="jump('hero')" >Home</a></li>
-          <li><a (click)="jump('about')" >Rólam</a></li>
-          <li><a (click)="jump('portfolio')">Portfólió</a></li>
-          <li><a (click)="jump('contact')">Kapcsolat</a></li>
-        </ul>
-        <div class="menu-toggle">
-          <fa-icon *ngIf="!menuOpen" [icon]="faBars" (click)="toggleMenu()"></fa-icon>
-          <fa-icon *ngIf="menuOpen" [icon]="faClose" (click)="toggleMenu()"></fa-icon>
-        </div>
-      </nav>
- 
+<section id="hero" class="hero">
+  <div class="filter"></div>
+  <header [ngClass]="menuOpen ? 'open' : '' ">
+
+    <nav (scroll)="onWindowScroll()">
+      <div class="logo">
+        <h3 class="logo-h3">Logo</h3>
+      </div>
+      <ul [ngClass]="menuOpen ? 'open' : '' ">
+        <li><a (click)="jump('hero')">Home</a></li>
+        <li><a (click)="jump('about')">Rólam</a></li>
+        <li><a (click)="jump('portfolio')">Portfólió</a></li>
+        <li><a (click)="jump('contact')">Kapcsolat</a></li>
+      </ul>
+      <div class="menu-toggle">
+        <fa-icon *ngIf="!menuOpen" [icon]="faBars" (click)="toggleMenu()"></fa-icon>
+        <fa-icon *ngIf="menuOpen" [icon]="faClose" (click)="toggleMenu()"></fa-icon>
+      </div>
+    </nav>
+
   </header>
   <div class="container">
-    <h2>Hero</h2>
+    <h1>Priskin Zsuzsanna</h1>
+    <h4>Frontend Programozó</h4>
   </div>
 </section>
 
-<section   id="about" class="about">
+<section id="about" class="about">
   <div class="container">
     <h2>Rólam</h2>
     <div class="side-flex-container">
 
       <div class="side-menu">
         <button [ngClass]="isAbout ? 'active' : '' " (click)="toggleAboutMenu('isAbout')">
-          <fa-icon [icon]="faUserSecret" ></fa-icon>
+          <fa-icon [icon]="faUserSecret"></fa-icon>
           <span class="button-text">Rólam</span>
         </button>
         <button [ngClass]="isStudies ? 'active' : '' " (click)="toggleAboutMenu('isStudies')">
-          <fa-icon [icon]="faGraduationCap" ></fa-icon>
+          <fa-icon [icon]="faGraduationCap"></fa-icon>
           <span class="button-text">Tanulmányok</span>
         </button>
         <button [ngClass]="isExperience ? 'active' : '' " (click)="toggleAboutMenu('isExperience')">
-          <fa-icon [icon]="faMagicWandSparkles" ></fa-icon>
+          <fa-icon [icon]="faMagicWandSparkles"></fa-icon>
           <span class="button-text">Tapasztalat</span>
         </button>
         <button [ngClass]="isLanguages ? 'active' : '' " (click)="toggleAboutMenu('isLanguages')">
-          <fa-icon [icon]="faLanguage" ></fa-icon>
+          <fa-icon [icon]="faLanguage"></fa-icon>
           <span class="button-text">Nyelvtudás</span>
         </button>
       </div>
 
       <div class="right-text">
 
-        <div  *ngIf="isAbout">
+        <div *ngIf="isAbout">
           <h3>Pályám</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a javascript és a css világa.
-            
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a javascript és a
+            css világa.
+
           </p>
         </div>
-        <div *ngIf="isStudies" >
+        <div *ngIf="isStudies">
           <h3>Tanulmányok</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
+            dizájn kapcsolata.
           </p>
         </div>
-        <div *ngIf="isExperience" >
+        <div *ngIf="isExperience">
           <h3>Munkáim</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
+            dizájn kapcsolata.
           </p>
         </div>
-        <div *ngIf="isLanguages" >
+        <div *ngIf="isLanguages">
           <h3>Nyelvtudás</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a dizájn kapcsolata.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
+            dizájn kapcsolata.
           </p>
         </div>
 
@@ -81,18 +87,312 @@
   </div>
 </section>
 
-<section  id="portfolio" class="portfolio">
+<section id="portfolio" class="portfolio">
   <div class="container">
     <h2>Portfólió</h2>
+
+    <div class="flex-center flex-wrap hidden">
+
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/ReactApps/" target="_blank">Live Site</a>
+          <img src="assets/images/port/reactapps.png" alt="react apps oldal thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">react apps</h3>
+        <button (click)="toggleOpenPopup()" type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>React Kezdőlap Feladatlist, Kategorizál Jegyzetek és Szótár Funkciókkal</h3>
+            <p>React</p>
+            <div class="skills">
+              <div class="skill-item">React</div>
+              <div class="skill-item">Hooks</div>
+              <div class="skill-item">UseContext</div>
+              <div class="skill-item">React Router</div>
+              <div class="skill-item">Api</div>
+              <div class="skill-item">Local Storage</div>
+              <div class="skill-item">Styled Components</div>
+              <div class="skill-item">Mobile First Workflow</div>
+              <div class="skill-item">Keyframes</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/ReactApps/" target="_blank" class="btn">live
+              site
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/FrontendMentor-SCSS-Sunnyside-Landing-Page/" target="_blank">Live
+            Site
+          </a>
+          <img src="assets/images/port/sunnyside.png" alt="sunnyside scss thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">Sunnyside Page</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Frontend Mentor Challange</h3>
+            <p>SASS/SCSS Landing Page</p>
+            <div class="skills">
+              <div class="skill-item">SASS/SCSS</div>
+              <div class="skill-item">HTML</div>
+              <div class="skill-item">CSS</div>
+              <div class="skill-item">JAVASCRIPT</div>
+              <div class="skill-item">SVG</div>
+              <div class="skill-item">MOBILE FIRST WORKFLOW</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/FrontendMentor-SCSS-Sunnyside-Landing-Page/" target="_blank"
+              class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/OOP-Dictionary/" target="_blank">Live Site
+          </a>
+          <img src="assets/images/port/dictionary.png" alt="szótár oldal thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">js OOP dictionary</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Angol egynyelvű szótár jegyzet funkcióval</h3>
+            <p>Javascript: Object Oriented Programing</p>
+            <div class="skills">
+              <div class="skill-item">OOP</div>
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">Api</div>
+              <div class="skill-item">Local Storage</div>
+              <div class="skill-item">Light - Dark theme</div>
+              <div class="skill-item">Show - Hide elements</div>
+              <div class="skill-item">Playing Audio</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/OOP-Dictionary/" target="_blank" class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/React-GridLayout-Animation-Movie-Page/" target="_blank">Live
+            Site</a>
+
+          <img src="assets/images/port/movies.png" alt="film kereső oldal thumbnail">
+
+        </div>
+        <h3 class="portfolio-item-title">react movies</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>React Filter Movies</h3>
+            <p>React Framer Motion Animations</p>
+            <div class="skills">
+              <div class="skill-item">React</div>
+              <div class="skill-item">Hooks</div>
+              <div class="skill-item">Framer Motion</div>
+              <div class="skill-item">Layout Animation</div>
+              <div class="skill-item">CSS Grid</div>
+              <div class="skill-item">Component Animation</div>
+              <div class="skill-item">Card layer animation on hover</div>
+              <div class="skill-item">Api</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/React-GridLayout-Animation-Movie-Page/" target="_blank"
+              class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/FrontendMentorProject-dashboard/" target="_blank">Live Site
+          </a>
+          <img src="assets/images/port/dashboard.png" alt="dashboard page thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">js dashboard</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Tevékenységnapló</h3>
+            <p>Frontend Mentor Project</p>
+            <div class="skills">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">Json data</div>
+              <div class="skill-item">Css Grid</div>
+              <div class="skill-item">Flexbox</div>
+              <div class="skill-item">Mobile First Workflow</div>
+              <div class="skill-item">Active data</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/FrontendMentorProject-dashboard/" target="_blank"
+              class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/OOP---ToDo-List/" target="_blank">Live Site
+          </a>
+          <img src="assets/images/port/todo-1.png" alt="feladatlist thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">js todo list with OOP</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Feladatlista</h3>
+            <p>Javascript: Object Oriented Programming</p>
+            <div class="skills">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">OOP</div>
+              <div class="skill-item">Local Storage</div>
+              <div class="skill-item">Light - Dark theme</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/OOP---ToDo-List/" target="_blank" class="btn">live site</a>
+          </div>
+
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/Todo-List-with-log-in---javascript/" target="_blank">Live Site
+          </a>
+          <img src="assets/images/port/todo-2.png" alt="feladatlista bejelentkező felülettel thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">js todo list with login</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Feladatlista Bejelentkező felülettel</h3>
+            <p>Javascript</p>
+            <div class="skills">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">Log in</div>
+              <div class="skill-item">Todo list</div>
+              <div class="skill-item">Light - Dark theme saved in local storage</div>
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/Todo-List-with-log-in---javascript/" target="_blank"
+              class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/Bootstrap-Balett-LandingPage/" target="_blank">
+            Live Site</a>
+          <img src="assets/images/port/balett.png" alt="balett oldal thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">balett studio website</h3>
+        <button type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Balett landing page</h3>
+            <p>Bootstrap Project</p>
+            <div class="skills">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">New IntersectionObserver</div>
+              <div class="skill-item">Animations</div>
+              <div class="skill-item">Bootstrap</div>
+              <div class="skill-item">CSS</div>
+              <div class="skill-item">Log in</div>
+
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/Bootstrap-Balett-LandingPage/" target="_blank" class="btn">live
+              site</a>
+          </div>
+        </div>
+      </div>
+      <div class="portfolio-item hidden">
+        <div class="portfolio-item-thumbnail">
+          <a href="https://priskinzsuzsanna.github.io/Instruments-Memory-Game---Javascript/" target="_blank">Live Site
+          </a>
+          <img src="assets/images/port/memory.png" alt="memória játék thumbnail">
+        </div>
+        <h3 class="portfolio-item-title">js memory game</h3>
+        <button  (click)="toggleOpenPopup()" type="button" class="btn view-project-btn">info</button>
+        <div class="portfolio-item-details">
+          <div class="description">
+            <h3>Memória Játék</h3>
+            <p>javascript</p>
+            <div class="skills">
+              <div class="skill-item">Javascript</div>
+              <div class="skill-item">Card matching logic</div>
+              <div class="skill-item">Reset and shuffle cards for new game</div>
+              <div class="skill-item">CSS</div>
+              <div class="skill-item">Flipping cards in css</div>
+              <div class="skill-item">Keyframes</div>
+
+            </div>
+            <a href="https://priskinzsuzsanna.github.io/Instruments-Memory-Game---Javascript/" target="_blank"
+              class="btn">live site</a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
   </div>
 </section>
 
 <section id="contact" class="contact">
+  <div class="filter"></div>
   <div class="container">
     <h2>Kapcsolat</h2>
+
+    <div class="form hidden">
+      <form action="https://formsubmit.co/priskin.zsuzsanna@gmail.com" method="POST">
+        <input type="hidden" name="_next" value="https://priskinzsuzsanna.github.io/thanks.html">
+        <div class="input-data">
+          <input type="text" name="Name" required>
+          <div class="underline"></div>
+          <label for="">Név</label>
+        </div>
+        <div class="input-data">
+          <input type="email" name="Email" required>
+          <div class="underline"></div>
+          <label for="">E-mail</label>
+        </div>
+        <div class="input-data textarea">
+          <textarea rows="8" cols="80" name="Message" required></textarea>
+          <div class="underline"></div>
+          <label for="">Üzenet</label>
+        </div>
+        <div class="button">
+          <button type="submit" value="submit">Küldés</button>
+        </div>
+      </form>
+
+    </div>
+    <div class="social hidden">
+      <ul>
+        <li><a href="https://github.com/PriskinZsuzsanna" target="_blank"> <fa-icon [icon]="faGithub"></fa-icon></a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/zsuzsanna-priskin" target="_blank"><fa-icon
+              [icon]="faLinkedin"></fa-icon></a></li>
+        <li><a href="tel: +36308145597"><fa-icon [icon]="faPhone"></fa-icon></a></li>
+        <li><a href="mailto:priskin.zsuzsanna@gmail.com"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+        </li>
+      </ul>
+    </div>
   </div>
+
+  <footer>
+    <div class="container">
+      <p>Copyright &copy; 2023 Priskin Zsuzsanna</p>
+    </div>
+  </footer>
 </section>
 
-<footer>
-  <div class="container"></div>
-</footer>
+<!--Portfolio Pop-Up-->
+<div *ngIf="isOpenPopup" class="portfolio-popup">
+  <div class="pp-inner">
+    <div class="pp-content">
+      <div class="pp-header">
+        <button type="button" class="btn pp-close"> <fa-icon [icon]="faClose" (click)="toggleOpenPopup()"></fa-icon></button>
+        <div class="pp-thumbnail">
+          <img src="" alt="img">
+        </div>
+        <h3></h3>
+      </div>
+      <div class="pp-body">
+      </div>
+    </div>
+  </div>
+</div>

@@ -26,6 +26,33 @@ a {
     cursor: pointer;
 }
 
+h1, h2, h4 {
+    text-align: center;
+}
+
+h2 {
+    margin-bottom: 2rem;
+}
+
+h3:not(.logo-h3) {
+    margin-bottom: 1.5rem;
+}
+
+p {
+    line-height: 2rem;
+}
+
+button {
+    outline: none;
+    border: 1px solid var(--primary);
+    padding: .8rem 3rem;
+    border-radius: 2rem;
+    background: none;
+    margin-top: 1rem;
+    color: var(--primary);
+    cursor: pointer;
+}
+
 body {
     width: 100%;
     min-height: 100vh;
@@ -56,15 +83,3 @@ section {
     }
 }
 
-h2 {
-    text-align: center;
-    margin-bottom: 2rem;
-}
-
-h3 {
-    margin-bottom: 1.5rem;
-}
-
-p {
-    line-height: 2rem;
-}

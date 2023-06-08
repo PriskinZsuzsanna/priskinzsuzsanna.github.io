@@ -5,6 +5,8 @@ header {
     top:0;
     left: 0;
     right: 0;
+    color: var(--primary);
+    color: #fff;
     transition: all .5s ease-in-out;
     z-index: 100;
     
@@ -19,7 +21,7 @@ header {
         ul {
             position: absolute;
             width: 100%;
-            height: 100vh;
+            min-height: 100vh;
             left:-100%;
             right:0;
             top: 0;
@@ -42,15 +44,18 @@ header {
                 z-index: 1;
             }
             
+            li {
+                a {
+                    font-weight: 600;
+                }
+            }
         }
 
         ul.open {
             left:0;
-
             a {
                 color: #fff;
                 font-size: 1.5rem;
-                
             }
         }
 
@@ -62,7 +67,7 @@ header {
 
             fa-icon {
                 font-size: 1.2rem;
-                z-index: 100;
+                z-index: 1000;
                 cursor: pointer;
             }
         }
@@ -71,7 +76,8 @@ header {
 
     nav.scroll {
         background: var(--gradient);
-        backdrop-filter: blur(60px);
+        background-image: radial-gradient(circle, #7950f282 5%, #4dabf780 95%);
+        backdrop-filter: blur(10px);
     }
 }
 

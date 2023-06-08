@@ -1,0 +1,185 @@
+.contact {
+    color: var(--primary);
+    color: #fff;
+    position: relative;
+    background-image: radial-gradient(circle, #7950f2b5 5%, #4dabf78a 95%);
+
+    .form {
+        padding-inline: 5%;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .input-data {
+            position: relative;
+        }
+        
+        input,
+        textarea,
+        button {
+            width: 100%;
+            padding: 10px;
+            margin-top: 40px;
+            border: none;
+            outline: none;
+            background: none;
+            resize: none;
+            color: #fff;
+        }
+        
+        textarea {
+            height: 130px;
+        }
+        
+        label,
+        ::placeholder,
+        button {
+            color: #fff;
+        }
+        
+        .button {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: none;
+        }
+        
+         button {
+            cursor: pointer;
+            width: 60%;
+            border-radius: 35px;
+            border: 1px solid #fff;
+        }
+        
+         button:hover {
+            background: $l-primary-alpha;
+            border: 1px solid transparent;
+        }
+        
+         .input-data label {
+            position: absolute;
+            pointer-events: none;
+            bottom: 10px;
+            left: 0;
+            font-size: 16px;
+            transition: all 0.3s ease;
+        }
+        
+         .textarea label {
+            width: 100%;
+            bottom: 20px;
+        }
+        
+        
+         .input-data input:focus~label,
+         .input-data input:valid~label,
+         .textarea textarea:valid~label {
+            transform: translateY(-30px);
+            font-size: 14px;
+            color: var(--primary);
+        }
+        
+         .textarea textarea:focus~label {
+            transform: translateY(-120px);
+            font-size: 14px;
+            color: var(--primary);
+        }
+        
+         .input-data input:focus~.underline:before,
+         .input-data input:valid~.underline:before,
+         .textarea textarea:focus~.underline:before,
+         .textarea textarea:valid~.underline:before {
+            transform: scale(1);
+        }
+        
+         .input-data .underline {
+            position: absolute;
+            bottom: 0;
+            height: 2px;
+            width: 100%;
+            background: #fff;
+        }
+        
+         .input-data .underline:before {
+            position: absolute;
+            content: "";
+            height: 2px;
+            width: 100%;
+            background: var(--primary);
+            transform: scaleX(0);
+            transform-origin: center;
+            transition: transform 0.3s ease;
+        }
+        
+    }
+   
+    
+    .social {
+        width: 70%;
+        margin-inline: auto;
+        ul {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+
+            li {
+                position: relative;
+                list-style: none;
+                margin: 10px;
+
+                a {
+                    position: relative;
+                    width: 50px;
+                    height: 50px;
+                    display: inline-block;
+                    border-radius: 10px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    background: transparent;
+                    font-size: 1.2rem;
+                    border: 1px solid #fff;
+                    backdrop-filter: blur(2px);
+                    transition: 0.5s;
+                    overflow: hidden;
+
+                    fa-icon {
+                        color: #fff;
+                    }
+                }
+
+                a:hover {
+                    translate: 0 -10px;
+                }
+                
+                a::before {
+                    content: '';
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 50px;
+                    height: 100%;
+                    background: rgba(255, 255, 255, 0.5);
+                    transform: skewX(45deg) translateX(150px);
+                    transition: 0.5s;
+                }
+                
+                a:hover::before {
+                    transform: skewX(45deg) translateX(-150px);
+                }
+            }
+        }
+    }
+  
+}
+
+
+footer {
+    text-align: center;
+    letter-spacing:3px;
+}

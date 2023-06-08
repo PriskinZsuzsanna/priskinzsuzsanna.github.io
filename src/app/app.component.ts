@@ -1,5 +1,6 @@
 import { Component, HostListener } from '@angular/core';
-import { faBars, faClose, faUserSecret, faGraduationCap, faMagicWandSparkles, faLanguage } from '@fortawesome/free-solid-svg-icons';
+import { faBars, faClose, faUserSecret, faGraduationCap, faMagicWandSparkles, faLanguage, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
+import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
 import { Router } from '@angular/router'
 
 
@@ -17,12 +18,17 @@ export class AppComponent {
   faGraduationCap = faGraduationCap 
   faMagicWandSparkles = faMagicWandSparkles 
   faLanguage = faLanguage 
+  faGithub = faGithub 
+  faLinkedin = faLinkedin 
+  faEnvelope = faEnvelope 
+  faPhone = faPhone 
 
   menuOpen: boolean = false
   isAbout:boolean = true;
   isStudies : boolean = false;
   isExperience : boolean = false;
   isLanguages : boolean = false;
+  isOpenPopup: boolean = false;
 
   
   constructor(private router: Router){
@@ -67,6 +73,10 @@ export class AppComponent {
     } else if(button == "isLanguages"){
       this.isLanguages = true
     }
+  }
+
+  toggleOpenPopup(){
+    this.isOpenPopup = !this.isOpenPopup
   }
 
   
