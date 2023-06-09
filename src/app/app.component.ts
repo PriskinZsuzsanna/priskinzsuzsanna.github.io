@@ -1,6 +1,7 @@
 import { Component, HostListener } from '@angular/core';
 import { faBars, faClose, faUserSecret, faGraduationCap, faMagicWandSparkles, faLanguage, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
+import { faHtml5, faCss3, faJs, faReact, faAngular, faNodeJs, faGit, faBootstrap, faSass } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router'
 import { PORTFOLIO } from './portfolio';
 import { PortfolioItem } from './portfolio-item';
@@ -29,6 +30,16 @@ export class AppComponent {
   faLinkedin = faLinkedin 
   faEnvelope = faEnvelope 
   faPhone = faPhone 
+
+  faHtml5 = faHtml5
+  faCss3 = faCss3
+  faJs = faJs
+  faReact = faReact
+  faAngular = faAngular
+  faNodeJs = faNodeJs
+  faGit = faGit
+  faBootstrap = faBootstrap
+  faSass = faSass
 
   menuOpen: boolean = false
   isAbout:boolean = true;
@@ -63,7 +74,7 @@ export class AppComponent {
   jump(fragment:any){
     console.log(fragment)
     this.router.navigateByUrl('/#'+fragment)
-    this.toggleMenu()
+    this.menuOpen = false
   }
 
   toggleAboutMenu(button: string){

@@ -25,6 +25,7 @@ $d-open-nav: #000;
 
 @mixin light(){
     --gradient: #{linear-gradient(110deg, $l-gradient-1, $l-gradient-2, $l-gradient-3)};
+    --gradient-2: #{linear-gradient(110deg,  $l-gradient-2, $l-gradient-3, $l-gradient-2)};
     --primary: #{$l-primary};
     --color: #{$l-color};
     --bg: #{$l-bg};
@@ -33,6 +34,7 @@ $d-open-nav: #000;
 }
 @mixin dark(){
     --gradient: #{linear-gradient(110deg, $d-gradient-1, $d-gradient-2, $d-gradient-3)};
+    --gradient: #{linear-gradient(110deg, $d-gradient-2, $d-gradient-3, $d-gradient-2)};
     --primary: #{$d-primary};
     --color: #{$d-color};
     --bg: #{$d-bg};
