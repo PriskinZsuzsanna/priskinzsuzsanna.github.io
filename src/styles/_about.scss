@@ -154,6 +154,22 @@
                 -moz-text-fill-color: transparent;
             };
 
+            .work-skills {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: wrap;
+                gap: 1rem;
+
+                button {
+                    padding: .5rem 1rem;
+                    margin: 0;
+                    background: var(--gradient-2);
+                    border: none;
+                    color: #fff;
+                }
+            }
+
             .lang-title {
                 margin-bottom: 0;
             }

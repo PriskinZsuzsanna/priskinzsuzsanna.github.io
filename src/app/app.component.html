@@ -20,6 +20,11 @@
 
   </header>
   <div class="container">
+    <div class="hero-buttons">
+      <button><fa-icon [icon]="faReact"></fa-icon></button>
+      <button><fa-icon [icon]="faAngular"></fa-icon></button>
+      <button><fa-icon [icon]="faJs"></fa-icon></button>
+    </div>
     <h1>Priskin Zsuzsanna</h1>
     <h4>Frontend Programozó</h4>
   </div>
@@ -54,9 +59,12 @@
         <div *ngIf="isAbout">
           <h3 class="gradient-text">Pályám</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a frontend programozás világa.
+            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a frontend
+            programozás világa.
           </p>
-          <p>A javascriptre épülő keretrendszerek és könyvtárak használata mellett közel áll hozzám a node.js és a backend világa is, illetve nagyon fontosnak tartom, hogy a közeljövőben minél több UI/UX ismeretet szerezzek.</p>
+          <p>A javascriptre épülő keretrendszerek és könyvtárak használata mellett közel áll hozzám a node.js és a
+            backend világa is, illetve nagyon fontosnak tartom, hogy a közeljövőben minél több UI/UX ismeretet
+            szerezzek.</p>
           <h3 class="gradient-text">Skills</h3>
           <div class="buttons">
             <button><fa-icon [icon]="faReact"></fa-icon></button>
@@ -91,17 +99,25 @@
           <h3 class="gradient-text">Frontend Munkáim</h3>
           <p class="gradient-text">2022-2023</p>
           <p>React, Angular, Js projektjeim elérhetősége:</p>
-            <div class="buttons exp-buttons">
-              <button (click)="jump('portfolio')">Portfólió</button>
-              <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button> 
-            </div>
-            <h3 class="gradient-text">Korábbi Munkatapasztalat</h3>
-            <p class="gradient-text">2022-2023</p>
-            <p>Klasszikus Gitártanár</p>
-            <p>14 év folytonos munkaviszonyt tudok magam mögött az oktatásban.</p>
-            <p>Munkám során megtanultam csapatban dolgozni, munkahelyi konfliktusokat kezelni és egyedül felelősséget vállalni, illetve kollégákkal és ügyfelekkel kommunikálni.</p>
-            
-            
+          <div class="buttons exp-buttons">
+            <button (click)="jump('portfolio')">Portfólió</button>
+            <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
+          </div>
+          <h3 class="gradient-text">Korábbi Munkatapasztalat</h3>
+          <p class="gradient-text">2022-2023</p>
+          <p>Klasszikus Gitártanár</p>
+          <p>14 év folytonos munkaviszonyt tudok magam mögött az oktatásban.</p>
+          <p>Munkám során használt és elsajátított készségeim, tulajdonságaim:</p>
+          <div class="work-skills">
+            <button>Csapatmunka</button>
+            <button>Önálló felelőségvállalás</button>
+            <button>Munkahelyi Konfliktuskezelés</button>
+            <button>Kommunikáció a kollégákkal és az ügyfelekkel</button>
+            <button>Hatékony Időkezelés</button>
+            <button>Precizitás</button>
+            <button>Kreatív feladatmegoldás</button>
+          </div>
+
         </div>
         <div *ngIf="isLanguages">
           <h3 class="gradient-text">Nyelvtudás</h3>
@@ -112,9 +128,10 @@
           <p class="lang-title">Érettségi</p>
           <p>Angol Emeltszint</p>
           <p class="gradient-text">Angol Szakmai Nyelv használata</p>
-          <p class="lang-title">Napi szinten használok angol nyelvű oktatóvideókat, olvasok angol nyelvű dokumentációkat.
+          <p class="lang-title">Napi szinten használok angol nyelvű oktatóvideókat, olvasok angol nyelvű
+            dokumentációkat.
             Szívesen tanulok angol nyelven írásban és szóban is.</p>
-          
+
         </div>
 
       </div>
