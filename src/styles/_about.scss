@@ -23,15 +23,16 @@
 
             button {
                 width: 23%;
-                padding: 1rem;
-                font-size: 1rem;
+                padding: 1em;
+                font-size: 1em;
                 outline: none;
                 background: none;
                 border: 1px solid var(--primary-alpha);
                 color: var(--primary-alpha);
-                margin-bottom: 1rem;
+                margin-bottom: 1em;
                 margin-top: 0;
                 font-weight: 500;
+                border-radius: 0;
                 cursor: pointer;
 
                 @media screen and (min-width: 700px) {
@@ -41,7 +42,7 @@
                 }
 
                 @media screen and (min-width: 900px) {
-                    padding: 1rem 2rem 1rem 1rem;
+                    padding: 1em 2em 1em 1em;
                     justify-content: flex-start;
                     align-items: center;
                     gap: 1rem;
@@ -59,7 +60,7 @@
 
                 fa-icon {
                     align-self: center;
-                    font-size: 1.2rem;
+                    font-size: 1.2em;
                     color: var(--primary-alpha);
                 }
 
@@ -78,7 +79,7 @@
         }
 
         .right-text {
-            padding: 1.5rem;
+            padding: 1.5em;
 
             @media screen and (min-width: 700px) {
                 padding-top: .5rem;
@@ -88,11 +89,11 @@
                 display: inline-block;
                 position: relative;
             }
-
+            
             h3:nth-of-type(2) {
-                margin-top: 2.5rem;
+                margin-top: 2.5em;
             }
-
+            
             h3::after {
                 content: '';
                 position: absolute;
@@ -102,9 +103,12 @@
                 left: 0;
                 bottom: - .4rem;
             }
-
-            p {
-                margin-bottom: .7rem;
+            
+            p:nth-of-type(1),
+            p.gradient-text,
+            h4.gradient-text {
+                margin-top: 2em;
+                margin-bottom: .7em;
             }
 
             .buttons {
@@ -112,33 +116,106 @@
                 flex-wrap: wrap;
                 justify-content: center;
                 align-items: center;
-                gap: 1rem;
-
-                button{
+                gap: 1em;
+                margin-top: 2em;
+                
+                .rounded-btn{
                     padding: 0;
-                    width: 3rem;
-                    height: 3rem;
+                    width: 3em;
+                    height: 3em;
                     border: none;
                     background: var(--gradient);
                     color: #fff;
+                    margin-top: .5em;
+
 
                     fa-icon {
-                        font-size: 1.5rem;
+                        font-size: 1.5em;
+
+                       
                     }
                 }
             }
 
+            .about span {
+                color: var(--primary);
+            }
+
+            .studies {
+                position: relative;
+                margin-left: 2rem;
+
+                p:nth-of-type(1),
+                .buttons {
+                    margin-top: 0;
+                }
+            }
+
+            .studies h4 {
+                text-align: left;
+                position: relative;
+            }
+
+            .studies::before {
+                content: '';
+                position: absolute;
+                left: -2rem;
+                top: 0;
+                bottom: 0;
+                width: 3px;
+                height: 100%;
+                background: var(--gradient);
+                opacity: .6;
+            }
+
+            .studies h4::after {
+                content: '';
+                position: absolute;
+                left: calc(-2rem - .5em + 1.5px);
+                width: 1em;
+                height: 1em;
+                border-radius: 50%;
+                background: var(--gradient)
+            }
+
+            .experience {
+                width: 100%;
+                display: block;
+
+                @media screen and (min-width: 1800px){
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                }
+            }
+
+
+            .experience div:nth-child(1) {
+                margin-bottom: 3rem;
+            }
+
             .exp-buttons {
                 justify-content: flex-start;
+                margin-bottom: 2rem;
                 button{
                     width: auto;
-                    padding: .8rem 3rem;
+                    padding: 1em 4em;
                     margin-bottom: 0;
+                    margin-top: -1em;
+                    background: var(--gradient-2);
+                    border: none;
+                    color: #fff;
+                    border-radius: 0;
     
                     a {
                         color: #fff;
                     }
                 }
+            }
+
+            .experience .narrow-btn {
+                margin-right: 1em;
+                margin-bottom: 1em;
             }
 
             .gradient-text {
@@ -155,23 +232,44 @@
             };
 
             .work-skills {
+                max-width: 500px;
                 display: flex;
-                justify-content: center;
+                justify-content: flex-start;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 1rem;
-
-                button {
-                    padding: .5rem 1rem;
-                    margin: 0;
-                    background: var(--gradient-2);
-                    border: none;
-                    color: #fff;
-                }
+                margin-top: 2rem;
             }
 
-            .lang-title {
-                margin-bottom: 0;
+            button.narrow-btn {
+                padding: .5rem 1rem;
+                margin: 0;
+                background: var(--gradient-2);
+                border: none;
+                color: #fff;
+            }
+
+            .languages {
+                display: block;
+
+                @media screen and (min-width: 1800px){
+                    display: grid;
+                    grid-template-columns: repeat(2, 1fr);
+                    gap: 2rem;
+                }
+
+                .lang-title {
+                    margin-top: 1rem;
+                }
+
+                .narrow-btn {
+                    border-radius: 0;
+                }
+    
+            }
+
+            .languages div:nth-child(1) {
+                margin-bottom: 3rem;
             }
 
 

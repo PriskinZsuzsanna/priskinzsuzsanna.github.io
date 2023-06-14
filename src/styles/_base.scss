@@ -44,17 +44,18 @@ h3:not(.logo-h3) {
 }
 
 p {
-    line-height: 2rem;
+    line-height: 2em;
 }
 
 button{
     outline: none;
     border: 1px solid var(--primary);
-    padding: .8rem 3rem;
+    padding: .8em 3em;
     border-radius: 2rem;
     background: none;
-    margin-top: 1rem;
+    margin-top: 1em;
     color: var(--primary);
+    font-size: .85em;
     cursor: pointer;
 }
 
@@ -65,6 +66,17 @@ body {
     justify-content: center;
     align-items: center;
     color: #343333;
+    font-size: 1rem;
+
+    @media screen and (max-width: 374px){
+        font-size: .85rem;
+    }
+    @media screen and (min-width: 1200px){
+        font-size: 1.1rem;
+    }
+    @media screen and (min-width: 1900px){
+        font-size: 1.3rem;
+    }
 }
 
 app-root {

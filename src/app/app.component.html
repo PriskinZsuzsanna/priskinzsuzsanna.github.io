@@ -4,7 +4,7 @@
 
     <nav (scroll)="onWindowScroll()">
       <div class="logo">
-        <h3 class="logo-h3">Logo</h3>
+        <h3 class="logo-h3"><a (click)="jump('hero')">PzS.</a></h3>
       </div>
       <ul [ngClass]="menuOpen ? 'open' : '' ">
         <li><a (click)="jump('hero')">Home</a></li>
@@ -20,13 +20,20 @@
 
   </header>
   <div class="container">
-    <div class="hero-buttons">
-      <button><fa-icon [icon]="faReact"></fa-icon></button>
-      <button><fa-icon [icon]="faAngular"></fa-icon></button>
-      <button><fa-icon [icon]="faJs"></fa-icon></button>
-    </div>
     <h1>Priskin Zsuzsanna</h1>
     <h4>Frontend Programozó</h4>
+  </div>
+  <button class="hero-btn"><a (click)="jump('portfolio')">Portfólió</a></button>
+  <div class="social hidden">
+    <ul>
+      <li><a href="https://github.com/PriskinZsuzsanna" target="_blank"> <fa-icon [icon]="faGithub"></fa-icon></a>
+      </li>
+      <li><a href="https://www.linkedin.com/in/zsuzsanna-priskin" target="_blank"><fa-icon
+            [icon]="faLinkedin"></fa-icon></a></li>
+      <li><a href="tel: +36308145597"><fa-icon [icon]="faPhone"></fa-icon></a></li>
+      <li><a href="mailto:priskin.zsuzsanna@gmail.com"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+      </li>
+    </ul>
   </div>
 </section>
 
@@ -56,81 +63,120 @@
 
       <div class="right-text">
 
-        <div *ngIf="isAbout">
+        <div class="about" *ngIf="isAbout">
           <h3 class="gradient-text">Pályám</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
             Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a frontend
             programozás világa.
           </p>
-          <p>A javascriptre épülő keretrendszerek és könyvtárak használata mellett közel áll hozzám a node.js és a
-            backend világa is, illetve nagyon fontosnak tartom, hogy a közeljövőben minél több UI/UX ismeretet
-            szerezzek.</p>
+          <p>A
+            <span>javascript</span>re épülő <span>keretrendszerek</span> és könyvtárak használata mellett közel áll
+            hozzám a <span>node.js</span> és a
+            backend világa is, illetve nagyon fontosnak tartom, hogy a közeljövőben minél több <span>UI/UX</span>
+            ismeretet
+            szerezzek.
+          </p>
           <h3 class="gradient-text">Skills</h3>
           <div class="buttons">
-            <button><fa-icon [icon]="faReact"></fa-icon></button>
-            <button><fa-icon [icon]="faAngular"></fa-icon></button>
-            <button><fa-icon [icon]="faJs"></fa-icon></button>
-            <button><fa-icon [icon]="faNodeJs"></fa-icon></button>
-            <button><fa-icon [icon]="faHtml5"></fa-icon></button>
-            <button><fa-icon [icon]="faGithub"></fa-icon></button>
-            <button><fa-icon [icon]="faGit"></fa-icon></button>
-            <button><fa-icon [icon]="faCss3"></fa-icon></button>
-            <button><fa-icon [icon]="faSass"></fa-icon></button>
-            <button><fa-icon [icon]="faBootstrap"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faReact"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faAngular"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faJs"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faNodeJs"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faHtml5"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faGithub"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faGit"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faCss3"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faSass"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faBootstrap"></fa-icon></button>
 
           </div>
         </div>
-        <div *ngIf="isStudies">
+
+        <div class="studies" *ngIf="isStudies">
           <h3 class="gradient-text">Tanulmányok</h3>
-          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
-            dizájn kapcsolata.
-          </p>
-          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
-            dizájn kapcsolata.
-          </p>
-          <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
-            Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a logika és a
-            dizájn kapcsolata.
-          </p>
-        </div>
-        <div *ngIf="isExperience">
-          <h3 class="gradient-text">Frontend Munkáim</h3>
-          <p class="gradient-text">2022-2023</p>
-          <p>React, Angular, Js projektjeim elérhetősége:</p>
-          <div class="buttons exp-buttons">
-            <button (click)="jump('portfolio')">Portfólió</button>
-            <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
+          <h4 class="gradient-text">EPAM START PROGRAM</h4>
+          <p>2023</p>
+          <h4 class="gradient-text">WEBLER FRONTEND KÉPZÉS</h4>
+          <p>2022-2023</p>
+          <div class="buttons">
+            <button class="rounded-btn"><fa-icon [icon]="faReact"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faAngular"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faJs"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faNodeJs"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faHtml5"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faGithub"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faGit"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faCss3"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faSass"></fa-icon></button>
+            <button class="rounded-btn"><fa-icon [icon]="faBootstrap"></fa-icon></button>
+
           </div>
-          <h3 class="gradient-text">Korábbi Munkatapasztalat</h3>
-          <p class="gradient-text">2022-2023</p>
-          <p>Klasszikus Gitártanár</p>
-          <p>14 év folytonos munkaviszonyt tudok magam mögött az oktatásban.</p>
-          <p>Munkám során használt és elsajátított készségeim, tulajdonságaim:</p>
-          <div class="work-skills">
-            <button>Csapatmunka</button>
-            <button>Önálló felelőségvállalás</button>
-            <button>Munkahelyi Konfliktuskezelés</button>
-            <button>Kommunikáció a kollégákkal és az ügyfelekkel</button>
-            <button>Hatékony Időkezelés</button>
-            <button>Precizitás</button>
-            <button>Kreatív feladatmegoldás</button>
+          <h4 class="gradient-text">ÚJRATERVEZÉS 3.0</h4>
+          <p>2022: Tanusítvány: 92%</p>
+          <h4 class="gradient-text">LISZT FERENC ZENEMŰVÉSZETI EGYETEM</h4>
+          <p>2010-2012: Klasszikus Gitárművész MA</p>
+          <p>2011-2012: Klasszikus Gitártanár MA</p>
+          <p>2007-2010: Klasszikus Előadóművész BA</p>
+        </div>
+
+        <div class="experience" *ngIf="isExperience">
+          <div>
+            <h3 class="gradient-text">Frontend Munkáim</h3>
+            <p class="gradient-text">2022-2023</p>
+            <div class="buttons exp-buttons">
+              <button (click)="jump('portfolio')">Portfólió</button>
+              <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
+            </div>
+            <p>Használt keretrendszerek, könyvtárak:</p>
+            <button class="narrow-btn">React</button>
+            <button class="narrow-btn">Angular</button>
+            <p>Programnyelvek:</p>
+            <button class="narrow-btn">Javascript</button>
+            <button class="narrow-btn">Javascript OOP</button>
+            <button class="narrow-btn">Node.js</button>
+            <button class="narrow-btn">Typescript</button>
+            <p>CSS ismeretek:</p>
+            <button class="narrow-btn">Sass/Scss</button>
+            <button class="narrow-btn">Bootstrap</button>
+            <button class="narrow-btn">CSS3</button>
+          </div>
+
+          <div>
+            <h3 class="gradient-text">Korábbi Munkatapasztalat</h3>
+            <p class="gradient-text">2009-2023</p>
+            <p>Klasszikus Gitártanár</p>
+            <p>14 év folytonos munkaviszonyt tudok magam mögött az oktatásban. Munkám során használt és elsajátított
+              készségeim, tulajdonságaim:</p>
+            <div class="work-skills">
+              <button class="narrow-btn">Csapatmunka</button>
+              <button class="narrow-btn">Önálló felelőségvállalás</button>
+              <button class="narrow-btn">Munkahelyi Konfliktuskezelés</button>
+              <button class="narrow-btn">Kommunikáció a kollégákkal és az ügyfelekkel</button>
+              <button class="narrow-btn">Hatékony Időkezelés</button>
+              <button class="narrow-btn">Precizitás</button>
+              <button class="narrow-btn">Kreatív feladatmegoldás</button>
+            </div>
           </div>
 
         </div>
-        <div *ngIf="isLanguages">
-          <h3 class="gradient-text">Nyelvtudás</h3>
-          <p class="gradient-text">2004</p>
-          <p class="lang-title">Nyelvvizsga: Angol Komplex Középfok</p>
-          <p>BME Nyelvvizsgaközpot</p>
-          <p class="gradient-text">2007</p>
-          <p class="lang-title">Érettségi</p>
-          <p>Angol Emeltszint</p>
-          <p class="gradient-text">Angol Szakmai Nyelv használata</p>
-          <p class="lang-title">Napi szinten használok angol nyelvű oktatóvideókat, olvasok angol nyelvű
-            dokumentációkat.
-            Szívesen tanulok angol nyelven írásban és szóban is.</p>
+
+        <div class="languages" *ngIf="isLanguages">
+          <div>
+            <h3 class="gradient-text">Nyelvtudás</h3>
+            <p class="gradient-text">2004</p>
+            <button class="narrow-btn">Angol Komplex Középfok</button>
+            <p class="lang-title">Nyelvvizsga</p>
+            <p>BME Nyelvvizsgaközpot</p>
+            <p class="gradient-text">2007</p>
+            <button class="narrow-btn">Angol Emeltszint</button>
+            <p class="lang-title">Érettségi</p>
+          </div>
+          <div>
+            <h3 class="gradient-text">Angol Szakmai Nyelv használata</h3>
+            <p class="lang-title">Napi szinten használok angol nyelvű oktatóvideókat, olvasok angol nyelvű
+              dokumentációkat.
+              Szívesen tanulok angol nyelven írásban és szóban is.</p>
+          </div>
 
         </div>
 
