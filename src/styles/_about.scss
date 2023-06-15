@@ -181,6 +181,11 @@
             .experience {
                 width: 100%;
                 display: block;
+                text-align: center;
+
+                @media screen and (min-width: 700px){
+                    text-align: left;
+                }
 
                 @media screen and (min-width: 1800px){
                     display: grid;
@@ -195,17 +200,23 @@
             }
 
             .exp-buttons {
-                justify-content: flex-start;
+                justify-content: center;
                 margin-bottom: 2rem;
+
+                @media screen and (min-width: 700px){
+                    justify-content: flex-start;
+                }
                 button{
                     width: auto;
                     padding: 1em 4em;
                     margin-bottom: 0;
                     margin-top: -1em;
-                    background: var(--gradient-2);
+                    background: var(--gradient);
                     border: none;
                     color: #fff;
                     border-radius: 0;
+                    border-radius: 2rem;
+                    font-weight: 500;
     
                     a {
                         color: #fff;
@@ -213,10 +224,28 @@
                 }
             }
 
-            .experience .narrow-btn {
-                margin-right: 1em;
-                margin-bottom: 1em;
+            .experience {
+                .techs {
+                    display: flex;
+                    justify-content: center;
+                    gap: 1.3rem;
+
+                    @media screen and (min-width: 700px){
+                        justify-content: flex-start;
+                    }
+                    
+                    h4 {
+                        text-align: left;
+                        max-width: 150px;
+                        margin-top: .6rem;
+                    };
+
+                    h4.long {
+                        max-width: 300px;
+                    }
+                }
             }
+          
 
             .gradient-text {
                 font-weight: 800;
@@ -232,13 +261,16 @@
             };
 
             .work-skills {
-                max-width: 500px;
                 display: flex;
-                justify-content: flex-start;
+                justify-content: center;
                 align-items: center;
                 flex-wrap: wrap;
                 gap: 1rem;
                 margin-top: 2rem;
+
+                @media screen and (min-width: 700px){
+                    justify-content: flex-start;
+                }
             }
 
             button.narrow-btn {
@@ -251,6 +283,11 @@
 
             .languages {
                 display: block;
+                text-align: center;
+
+                @media screen and (min-width: 700px){
+                    text-align: left;
+                }
 
                 @media screen and (min-width: 1800px){
                     display: grid;
@@ -259,11 +296,7 @@
                 }
 
                 .lang-title {
-                    margin-top: 1rem;
-                }
-
-                .narrow-btn {
-                    border-radius: 0;
+                    margin-bottom: 1rem;
                 }
     
             }
