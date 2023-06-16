@@ -31,20 +31,25 @@
         z-index: -1;
     }
 
-    .hero-btn {
-        border: 1px solid #fff;
-        transition: all .3s ease-in-out;
-
-        a {
-            color: #fff;
-        }
-
-        &:hover {
-            background: linear-gradient(110deg, #3227ca50, #3383d953);
-            border-color: transparent;
-            translate: 0 -5px;
+    .button {
+        width: 100%;
+        text-align: center;
+        .hero-btn {
+            border: 1px solid #fff;
+            transition: all .3s ease-in-out;
+    
+            a {
+                color: #fff;
+            }
+    
+            &:hover {
+                background: linear-gradient(110deg, #3227ca50, #3383d953);
+                border-color: transparent;
+                translate: 0 -5px;
+            }
         }
     }
+
 
     .social {
         width: 70%;

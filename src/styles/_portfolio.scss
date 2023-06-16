@@ -76,7 +76,7 @@
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 200;
+    z-index: 2000;
     /*
     height: auto;
     display: flex;
@@ -104,7 +104,7 @@
         align-items: center;
         justify-content: flex-start;
 
-        @media screen and (min-width: 700px) {
+        @media screen and (min-width: 1600px) {
             justify-content: center;
         }
 
@@ -134,13 +134,18 @@
                     font-size: 1rem;
                 }
 
+                .pp-thumbnail {
+                    max-width: 200px;
+                    margin-inline: auto;
+                }
+
                 .pp-thumbnail img {
                     border-radius: 10px;
                     pointer-events: none;
                 }
 
                 h3 {
-                    font-size: 25px;
+                    font-size: 1.5em;
                     text-transform: capitalize;
                     margin-block: 1rem .7rem;
                     text-align: center;
@@ -162,6 +167,8 @@
 
                     p {
                         text-transform: uppercase;
+                        font-size: .8em;
+                        margin-bottom: 1em;
                     }
 
                     .skills {
@@ -176,6 +183,7 @@
                             text-align: center;
                             border-radius: 50px;
                             transition: all .3s ease-in-out;
+                            font-size: .8em;
                         }
 
                     }

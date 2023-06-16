@@ -22,18 +22,20 @@
   <div class="container">
     <h1>Priskin Zsuzsanna</h1>
     <h4>Frontend Programozó</h4>
-  </div>
-  <button class="hero-btn"><a (click)="jump('portfolio')">Portfólió</a></button>
-  <div class="social hidden">
-    <ul>
-      <li><a href="https://github.com/PriskinZsuzsanna" target="_blank"> <fa-icon [icon]="faGithub"></fa-icon></a>
-      </li>
-      <li><a href="https://www.linkedin.com/in/zsuzsanna-priskin" target="_blank"><fa-icon
-            [icon]="faLinkedin"></fa-icon></a></li>
-      <li><a href="tel: +36308145597"><fa-icon [icon]="faPhone"></fa-icon></a></li>
-      <li><a href="mailto:priskin.zsuzsanna@gmail.com"><fa-icon [icon]="faEnvelope"></fa-icon></a>
-      </li>
-    </ul>
+    <div class="button">
+      <button class="hero-btn"><a (click)="jump('portfolio')">Portfólió</a></button>
+    </div>
+    <div class="social hidden">
+      <ul>
+        <li><a href="https://github.com/PriskinZsuzsanna" target="_blank"> <fa-icon [icon]="faGithub"></fa-icon></a>
+        </li>
+        <li><a href="https://www.linkedin.com/in/zsuzsanna-priskin" target="_blank"><fa-icon
+              [icon]="faLinkedin"></fa-icon></a></li>
+        <li><a href="tel: +36308145597"><fa-icon [icon]="faPhone"></fa-icon></a></li>
+        <li><a href="mailto:priskin.zsuzsanna@gmail.com"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+        </li>
+      </ul>
+    </div>
   </div>
 </section>
 
@@ -128,24 +130,30 @@
               <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
             </div>
             
-            <p>Használt keretrendszerek, könyvtárak:</p>
-            <div class="techs">
-              <h4 class="gradient-text">React,</h4>
-              <h4 class="gradient-text">Angular</h4>
+            <div class="flex-wrap">
+              <p>Használt keretrendszerek, könyvtárak:</p>
+              <div class="techs">
+                <h4 class="gradient-text">React,</h4>
+                <h4 class="gradient-text">Angular</h4>
+              </div>
             </div>
           
-            <p>Programnyelvek:</p>
-            <div class="techs">
-              <h4 class="gradient-text">Javascript,</h4>
-              <h4 class="gradient-text">Node.js,</h4>
-              <h4 class="gradient-text">Typescript</h4>
+            <div class="flex-wrap">
+              <p>Programnyelvek:</p>
+              <div class="techs">
+                <h4 class="gradient-text">Javascript,</h4>
+                <h4 class="gradient-text">Node.js,</h4>
+                <h4 class="gradient-text">Typescript</h4>
+              </div>
             </div>
             
-            <p>CSS ismeretek:</p>
-            <div class="techs">
-              <h4 class="gradient-text">Sass - Scss,</h4>
-            <h4 class="gradient-text">Bootstrap,</h4>
-            <h4 class="gradient-text">Css3</h4>
+            <div class="flex-wrap">
+              <p>CSS ismeretek:</p>
+              <div class="techs">
+                <h4 class="gradient-text">Sass - Scss,</h4>
+              <h4 class="gradient-text">Bootstrap,</h4>
+              <h4 class="gradient-text">Css3</h4>
+              </div>
             </div>
 
           
@@ -204,7 +212,7 @@
       <div *ngFor="let item of portfolio" class="portfolio-item hidden">
         <div class="portfolio-item-thumbnail">
           <a href="{{item.url}}" target="_blank">Live Site</a>
-          <img src="assets/images/port/{{item.image}}" alt="{{item.title}} oldal thumbnail">
+          <img src="assets/img/{{item.image}}" alt="{{item.title}} oldal thumbnail">
         </div>
         <h3 class="portfolio-item-title">{{item.title}}</h3>
         <button (click)="OpenPopup(item)" type="button" class="btn view-project-btn">info</button>
@@ -277,7 +285,7 @@
         <button type="button" class="btn pp-close"> <fa-icon [icon]="faClose"
             (click)="togglePortfolioPopup()"></fa-icon></button>
         <div class="pp-thumbnail">
-          <img src="assets/images/port/{{actual.image}}" alt="img">
+          <img src="assets/img/{{actual.image}}" alt="img">
         </div>
         <h3>{{actual.title}}</h3>
       </div>

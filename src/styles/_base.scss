@@ -47,7 +47,7 @@ p {
     line-height: 2em;
 }
 
-button{
+button {
     outline: none;
     border: 1px solid var(--primary);
     padding: .8em 3em;
@@ -68,13 +68,15 @@ body {
     color: #343333;
     font-size: 1rem;
 
-    @media screen and (max-width: 374px){
+    @media screen and (max-width: 374px) {
         font-size: .85rem;
     }
-    @media screen and (min-width: 1200px){
+
+    @media screen and (min-width: 1200px) {
         font-size: 1.1rem;
     }
-    @media screen and (min-width: 1900px){
+
+    @media screen and (min-width: 1900px) {
         font-size: 1.2rem;
     }
 }
@@ -102,8 +104,145 @@ section {
 
 .body-fade-out {
     height: 100vh;
+
     app-root {
         position: relative;
         background: var(--primary);
+    }
+}
+
+/*------------------------------------------------------------------------------------------------------*/
+nav {
+    opacity: 0;
+    animation: navFadeIn 2s ease-in-out;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
+}
+
+.hero {
+
+    h1,
+    h4,
+    button {
+        opacity: 0;
+        animation: heroFadeIn 2s ease-in-out;
+        animation-fill-mode: forwards;
+    }
+
+    .social ul li {
+
+        &:nth-of-type(1) {
+            animation: socialFadeIn1 2s ease-in-out;
+            translate: -100% 60%;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        &:nth-of-type(2) {
+            animation: socialFadeIn2 2s ease-in-out;
+            translate: -30% -100%;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        &:nth-of-type(3) {
+            animation: socialFadeIn3 2s ease-in-out;
+            translate: 30% -100%;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+
+        &:nth-of-type(4) {
+            animation: socialFadeIn4 2s ease-in-out;
+            translate: 100% -60%;
+            opacity: 0;
+            animation-fill-mode: forwards;
+            animation-delay: 1s;
+        }
+    }
+}
+
+@keyframes heroFadeIn {
+    0% {
+        opacity: 0;
+        filter: (blur(3px));
+    }
+
+    100% {
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes navFadeIn {
+    0% {
+        opacity: 0;
+        translate: 0 -100%;
+        filter: (blur(3px));
+    }
+
+    100% {
+        opacity: 1;
+        translate: 0 0;
+        filter: blur(0);
+    }
+}
+
+@keyframes socialFadeIn1 {
+    0% {
+        translate: -100% 60%;
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes socialFadeIn2 {
+    0% {
+        translate: -30% -100%;
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes socialFadeIn3 {
+    0% {
+        translate: 0 100%;
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+        filter: blur(0);
+    }
+}
+
+@keyframes socialFadeIn4 {
+    0% {
+        translate: 100% -60%;
+        opacity: 0;
+        filter: blur(3px);
+    }
+
+    100% {
+        translate: 0 0;
+        opacity: 1;
+        filter: blur(0);
     }
 }
