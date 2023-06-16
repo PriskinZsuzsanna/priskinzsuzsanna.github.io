@@ -65,7 +65,7 @@
 
       <div class="right-text">
 
-        <div class="about" *ngIf="isAbout">
+        <div class="about-me about-tab-content" *ngIf="isAbout">
           <h3 class="gradient-text">Pályám</h3>
           <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
             Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a frontend
@@ -94,7 +94,7 @@
           </div>
         </div>
 
-        <div class="studies" *ngIf="isStudies">
+        <div class="studies about-tab-content" *ngIf="isStudies">
           <h3 class="gradient-text">Tanulmányok</h3>
           <h4 class="gradient-text">EPAM START PROGRAM</h4>
           <p>2023</p>
@@ -121,17 +121,16 @@
           <p>2007-2010: Klasszikus Előadóművész BA</p>
         </div>
 
-        <div class="experience" *ngIf="isExperience">
+        <div class="experience about-tab-content" *ngIf="isExperience">
           <div>
             <h3 class="gradient-text">Frontend Munkáim Elérhetősége:</h3>
-            <p class="gradient-text">2022-2023</p>
             <div class="buttons exp-buttons">
               <button (click)="jump('portfolio')">Portfólió</button>
               <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
             </div>
             
             <div class="flex-wrap">
-              <p>Használt keretrendszerek, könyvtárak:</p>
+              <p>Keretrendszerek, könyvtárak:</p>
               <div class="techs">
                 <h4 class="gradient-text">React,</h4>
                 <h4 class="gradient-text">Angular</h4>
@@ -178,7 +177,7 @@
 
         </div>
 
-        <div class="languages" *ngIf="isLanguages">
+        <div class="languages about-tab-content" *ngIf="isLanguages">
           <div>
             <h3 class="gradient-text">Nyelvtudás</h3>
             <p class="gradient-text">2004</p>

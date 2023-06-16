@@ -23,6 +23,9 @@ $d-primary-alpha: #fe2c5d3e;
 $d-bg: #000;
 $d-open-nav: #000;
 
+//transition: 
+$transition: all .3s ease-in-out;
+
 @mixin light(){
     --gradient: #{linear-gradient(110deg, $l-gradient-1, $l-gradient-2, $l-gradient-3)};
     --gradient-2: #{linear-gradient(110deg,  $l-gradient-2, $l-gradient-3, $l-gradient-2)};
