@@ -1,0 +1,24 @@
+<section id="portfolio" class="portfolio">
+    <div class="container">
+      <h2>Portfólió</h2>
+  
+      <div class="flex-center flex-wrap hidden">
+  
+        <div *ngFor="let item of this.service.portfolio" class="portfolio-item hidden">
+          <div class="portfolio-item-thumbnail">
+            <a href="{{item.url}}" target="_blank">Live Site</a>
+            <img src="assets/img/{{item.image}}" alt="{{item.title}} oldal thumbnail">
+          </div>
+          <h3 class="portfolio-item-title">{{item.title}}</h3>
+          <button (click)="this.service.OpenPopup(item)" type="button" class="btn view-project-btn">info</button>
+          <div class="portfolio-item-details">
+          </div>
+  
+  
+        </div>
+  
+      </div>
+  
+  
+    </div>
+  </section>

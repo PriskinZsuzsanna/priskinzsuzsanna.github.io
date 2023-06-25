@@ -87,7 +87,7 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    color: #343333;
+    color: var(--text-color);
     font-size: 1rem;
 
     @media screen and (max-width: 374px) {
@@ -107,6 +107,7 @@ app-root {
     width: 100%;
     min-height: 100vh;
     background: var(--bg);
+    transition: $transition;
 }
 
 section {

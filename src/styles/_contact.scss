@@ -179,6 +179,10 @@
   
 }
 
+body.dark .contact {
+    background-image: radial-gradient(circle, var(--primary) , var(--bg) );
+}
+
 
 footer {
     text-align: center;
