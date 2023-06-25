@@ -1,0 +1,169 @@
+<section id="about" class="about">
+    <div class="container">
+      <h2>Rólam</h2>
+      <div class="side-flex-container">
+  
+        <div class="side-menu">
+          <button [ngClass]="this.service.isAbout ? 'active' : 'border-gradient border-gradient-gradient' " (click)="this.service.toggleAboutMenu('isAbout')">
+            <fa-icon [icon]="faUserSecret"></fa-icon>
+            <span class="button-text">Rólam</span>
+          </button>
+  
+          <button [ngClass]="this.service.isStudies ? 'active' : 'border-gradient border-gradient-gradient' " (click)="this.service.toggleAboutMenu('isStudies')">
+            <fa-icon [icon]="faGraduationCap"></fa-icon>
+            <span class="button-text">Tanulmányok</span>
+          </button>
+  
+          <button [ngClass]="this.service.isExperience ? 'active' : 'border-gradient border-gradient-gradient' " (click)="this.service.toggleAboutMenu('isExperience')">
+            <fa-icon [icon]="faMagicWandSparkles"></fa-icon>
+            <span class="button-text">Tapasztalat</span>
+          </button>
+  
+          <button [ngClass]="this.service.isLanguages ? 'active' : 'border-gradient border-gradient-gradient' " (click)="this.service.toggleAboutMenu('isLanguages')">
+            <fa-icon [icon]="faLanguage"></fa-icon>
+            <span class="button-text">Nyelvtudás</span>
+          </button>
+        </div>
+  
+        <div class="right-text">
+  
+          <div class="about-me about-tab-content" *ngIf="this.service.isAbout">
+            <h3 class="gradient-text">Pályám</h3>
+            <p>A folytonos tanulás, az új területek megismerése mindig is meghatározó szerepet játszott az életemben.
+              Ez a természetes felfedezésvágy terelt a programozás felé, ahol azonnal magával ragadott a frontend
+              programozás világa.
+            </p>
+            <p>A
+              <span>javascript</span>re épülő <span>keretrendszerek</span> és könyvtárak használata mellett közel áll
+              hozzám a <span>node.js</span> és a
+              backend világa is, illetve nagyon fontosnak tartom, hogy a közeljövőben minél több <span>UI/UX</span>
+              ismeretet
+              szerezzek.
+            </p>
+            <h3 class="gradient-text">Skills</h3>
+            <div class="buttons">
+              <button class="rounded-btn"><fa-icon [icon]="faReact"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faAngular"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faJs"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faNodeJs"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faHtml5"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faGithub"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faGit"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faCss3"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faSass"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faBootstrap"></fa-icon></button>
+  
+            </div>
+          </div>
+  
+          <div class="studies about-tab-content" *ngIf="this.service.isStudies">
+            <h3 class="gradient-text">Tanulmányok</h3>
+            <h4 class="gradient-text">EPAM: CROSS REGIONAL EDUCATION FRONTEND PROGRAM</h4>
+            <p>2023</p>
+            <h4 class="gradient-text">WEBLER FRONTEND KÉPZÉS</h4>
+            <p>2022-2023</p>
+            <div class="buttons">
+              <button class="rounded-btn"><fa-icon [icon]="faReact"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faAngular"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faJs"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faNodeJs"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faHtml5"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faGithub"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faGit"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faCss3"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faSass"></fa-icon></button>
+              <button class="rounded-btn"><fa-icon [icon]="faBootstrap"></fa-icon></button>
+  
+            </div>
+            <h4 class="gradient-text">ÚJRATERVEZÉS 3.0</h4>
+            <p>2022: Tanusítvány: 92%</p>
+            <h4 class="gradient-text">LISZT FERENC ZENEMŰVÉSZETI EGYETEM</h4>
+            <p>2010-2012: Klasszikus Gitárművész MA</p>
+            <p>2011-2012: Klasszikus Gitártanár MA</p>
+            <p>2007-2010: Klasszikus Előadóművész BA</p>
+          </div>
+  
+          <div class="experience about-tab-content" *ngIf="this.service.isExperience">
+            <div>
+              <h3 class="gradient-text">Frontend Munkáim Elérhetősége:</h3>
+              <div class="buttons exp-buttons">
+                <button (click)="this.service.jump('portfolio')">Portfólió</button>
+                <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
+              </div>
+  
+              <div class="flex-wrap">
+                <p>Keretrendszerek, könyvtárak:</p>
+                <div class="techs">
+                  <h4 class="gradient-text">React,</h4>
+                  <h4 class="gradient-text">Angular</h4>
+                </div>
+              </div>
+  
+              <div class="flex-wrap">
+                <p>Programnyelvek:</p>
+                <div class="techs">
+                  <h4 class="gradient-text">Javascript,</h4>
+                  <h4 class="gradient-text">Node.js,</h4>
+                  <h4 class="gradient-text">Typescript</h4>
+                </div>
+              </div>
+  
+              <div class="flex-wrap">
+                <p>CSS ismeretek:</p>
+                <div class="techs">
+                  <h4 class="gradient-text">Sass - Scss,</h4>
+                  <h4 class="gradient-text">Bootstrap,</h4>
+                  <h4 class="gradient-text">Css3</h4>
+                </div>
+              </div>
+  
+  
+            </div>
+  
+            <div>
+              <h3 class="gradient-text">Korábbi Munkatapasztalat</h3>
+              <p class="gradient-text">2009-2023</p>
+              <p>Klasszikus Gitártanár</p>
+              <p>14 év folytonos munkaviszonyt tudok magam mögött az oktatásban. Munkám során használt és elsajátított
+                készségeim, tulajdonságaim:</p>
+              <div class="work-skills">
+                <button class="narrow-btn">Kreatív feladatmegoldás</button>
+                <button class="narrow-btn">Csapatmunka</button>
+                <button class="narrow-btn">Önálló felelőségvállalás</button>
+                <button class="narrow-btn">Konfliktuskezelés</button>
+                <button class="narrow-btn">Kommunikáció</button>
+                <button class="narrow-btn">Hatékony Időkezelés</button>
+                <button class="narrow-btn">Precizitás</button>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="languages about-tab-content" *ngIf="this.service.isLanguages">
+            <div>
+              <h3 class="gradient-text">Nyelvtudás</h3>
+              <div class="flex">
+                <p class="gradient-text">2004</p>
+                <button class="narrow-btn">Angol Komplex Középfok</button>
+                <p class="lang-title">BME Nyelvvizsgaközpot</p>
+              </div>
+              <div class="flex">
+                <p class="gradient-text">2007</p>
+                <button class="narrow-btn">Angol Emeltszint</button>
+                <p class="lang-title">Érettségi</p>
+              </div>
+            </div>
+            <div>
+              <h3 class="gradient-text">Angol Szakmai Nyelv használata</h3>
+              <p class="lang-title">Napi szinten használok angol nyelvű oktatóvideókat, olvasok angol nyelvű
+                dokumentációkat.
+                Szívesen tanulok angol nyelven írásban és szóban is.</p>
+            </div>
+  
+          </div>
+  
+        </div>
+  
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,44 @@
+<section id="hero" class="hero">
+    <div class="filter"></div>
+    <header [ngClass]="this.service.menuOpen ? 'open' : '' ">
+  
+      <nav (scroll)="this.service.onWindowScroll()">
+        <div class="logo">
+          <h3 class="logo-h3"><a (click)="this.service.jump('hero')">PzS.</a></h3>
+        </div>
+        <ul [ngClass]="this.service.menuOpen ? 'open' : '' ">
+          <li><a (click)="this.service.jump('hero')">Home</a></li>
+          <li><a (click)="this.service.jump('about')">Rólam</a></li>
+          <li><a (click)="this.service.jump('portfolio')">Portfólió</a></li>
+          <li><a (click)="this.service.jump('contact')">Kapcsolat</a></li>
+          <div>
+            <fa-icon *ngIf="this.service.isDark" (click)="this.service.toggleMode()" [icon]="faSun"></fa-icon>
+              <fa-icon *ngIf="!this.service.isDark" (click)="this.service.toggleMode()" [icon]="faMoon"></fa-icon>
+          </div>
+        </ul>
+        <div class="menu-toggle">
+          <fa-icon *ngIf="!this.service.menuOpen" [icon]="faBars" (click)="this.service.toggleMenu()"></fa-icon>
+          <fa-icon *ngIf="this.service.menuOpen" [icon]="faClose" (click)="this.service.toggleMenu()"></fa-icon>
+        </div>
+      </nav>
+  
+    </header>
+    <div class="container">
+      <h1>Priskin Zsuzsanna</h1>
+      <h4>Frontend Programozó</h4>
+      <div class="button">
+        <button class="hero-btn"><a (click)="this.service.jump('portfolio')">Portfólió</a></button>
+      </div>
+      <div class="social hidden">
+        <ul>
+          <li><a href="https://github.com/PriskinZsuzsanna" target="_blank"> <fa-icon [icon]="faGithub"></fa-icon></a>
+          </li>
+          <li><a href="https://www.linkedin.com/in/zsuzsanna-priskin" target="_blank"><fa-icon
+                [icon]="faLinkedin"></fa-icon></a></li>
+          <li><a href="tel: +36308145597"><fa-icon [icon]="faPhone"></fa-icon></a></li>
+          <li><a href="mailto:priskin.zsuzsanna@gmail.com"><fa-icon [icon]="faEnvelope"></fa-icon></a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </section>

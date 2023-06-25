@@ -50,12 +50,12 @@ header {
                     font-weight: 600;
                     font-size: 1rem;
                 }
+
             }
         }
 
         ul.open {
             left:0;
-            border: 3px solid red;
             a {
                 color: #fff;
                 font-size: 1.5rem;
@@ -75,6 +75,10 @@ header {
             }
         }
 
+        fa-icon {
+            cursor: pointer;
+        }
+
     }
 
     nav.scroll {
@@ -82,10 +86,17 @@ header {
         background-image: radial-gradient(circle, #7950f282 5%, #4dabf780 95%);
         backdrop-filter: blur(10px);
     }
+
 }
 
 header.open {
     color: #fff;
 }
+
+body.dark nav.scroll {
+    background-image: radial-gradient(circle, #587cde7b 5%, #25253d3e 95%);
+}
+
+
 
 

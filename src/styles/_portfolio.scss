@@ -183,15 +183,14 @@
                             border-radius: 50px;
                             font-size: .8em;
                             scale: 1;
-                            color: var(--bg);
-                            border: 1px solid var(--bg);
+                            color: #fff;
+                            border: 1px solid #fff;
                             transition: $transition;
 
                             &:hover {
                                 background: var(--primary);
                                 scale: 1.03;
                                 border-color: var(--primary);
-                                color: var(--bg);
                             }
                         }
 
