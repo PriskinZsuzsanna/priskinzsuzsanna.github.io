@@ -45,19 +45,22 @@
     <div class="side-flex-container">
 
       <div class="side-menu">
-        <button [ngClass]="isAbout ? 'active' : '' " (click)="toggleAboutMenu('isAbout')">
+        <button [ngClass]="isAbout ? 'active' : 'border-gradient border-gradient-gradient' " (click)="toggleAboutMenu('isAbout')">
           <fa-icon [icon]="faUserSecret"></fa-icon>
           <span class="button-text">Rólam</span>
         </button>
-        <button [ngClass]="isStudies ? 'active' : '' " (click)="toggleAboutMenu('isStudies')">
+
+        <button [ngClass]="isStudies ? 'active' : 'border-gradient border-gradient-gradient' " (click)="toggleAboutMenu('isStudies')">
           <fa-icon [icon]="faGraduationCap"></fa-icon>
           <span class="button-text">Tanulmányok</span>
         </button>
-        <button [ngClass]="isExperience ? 'active' : '' " (click)="toggleAboutMenu('isExperience')">
+
+        <button [ngClass]="isExperience ? 'active' : 'border-gradient border-gradient-gradient' " (click)="toggleAboutMenu('isExperience')">
           <fa-icon [icon]="faMagicWandSparkles"></fa-icon>
           <span class="button-text">Tapasztalat</span>
         </button>
-        <button [ngClass]="isLanguages ? 'active' : '' " (click)="toggleAboutMenu('isLanguages')">
+
+        <button [ngClass]="isLanguages ? 'active' : 'border-gradient border-gradient-gradient' " (click)="toggleAboutMenu('isLanguages')">
           <fa-icon [icon]="faLanguage"></fa-icon>
           <span class="button-text">Nyelvtudás</span>
         </button>
@@ -96,7 +99,7 @@
 
         <div class="studies about-tab-content" *ngIf="isStudies">
           <h3 class="gradient-text">Tanulmányok</h3>
-          <h4 class="gradient-text">EPAM START PROGRAM</h4>
+          <h4 class="gradient-text">EPAM: CROSS REGIONAL EDUCATION FRONTEND PROGRAM</h4>
           <p>2023</p>
           <h4 class="gradient-text">WEBLER FRONTEND KÉPZÉS</h4>
           <p>2022-2023</p>
@@ -128,7 +131,7 @@
               <button (click)="jump('portfolio')">Portfólió</button>
               <button><a href="https://github.com/PriskinZsuzsanna" target="_blank">GitHub</a></button>
             </div>
-            
+
             <div class="flex-wrap">
               <p>Keretrendszerek, könyvtárak:</p>
               <div class="techs">
@@ -136,7 +139,7 @@
                 <h4 class="gradient-text">Angular</h4>
               </div>
             </div>
-          
+
             <div class="flex-wrap">
               <p>Programnyelvek:</p>
               <div class="techs">
@@ -145,17 +148,17 @@
                 <h4 class="gradient-text">Typescript</h4>
               </div>
             </div>
-            
+
             <div class="flex-wrap">
               <p>CSS ismeretek:</p>
               <div class="techs">
                 <h4 class="gradient-text">Sass - Scss,</h4>
-              <h4 class="gradient-text">Bootstrap,</h4>
-              <h4 class="gradient-text">Css3</h4>
+                <h4 class="gradient-text">Bootstrap,</h4>
+                <h4 class="gradient-text">Css3</h4>
               </div>
             </div>
 
-          
+
           </div>
 
           <div>
@@ -180,12 +183,16 @@
         <div class="languages about-tab-content" *ngIf="isLanguages">
           <div>
             <h3 class="gradient-text">Nyelvtudás</h3>
-            <p class="gradient-text">2004</p>
-            <p class="lang-title">Nyelvvizsga: BME Nyelvvizsgaközpot</p>
-            <button class="narrow-btn">Angol Komplex Középfok</button>
-            <p class="gradient-text">2007</p>
-            <p class="lang-title">Érettségi</p>
-            <button class="narrow-btn">Angol Emeltszint</button>
+            <div class="flex">
+              <p class="gradient-text">2004</p>
+              <button class="narrow-btn">Angol Komplex Középfok</button>
+              <p class="lang-title">BME Nyelvvizsgaközpot</p>
+            </div>
+            <div class="flex">
+              <p class="gradient-text">2007</p>
+              <button class="narrow-btn">Angol Emeltszint</button>
+              <p class="lang-title">Érettségi</p>
+            </div>
           </div>
           <div>
             <h3 class="gradient-text">Angol Szakmai Nyelv használata</h3>

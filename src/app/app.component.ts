@@ -96,9 +96,9 @@ export class AppComponent {
   OpenPopup(item:PortfolioItem){
     this.actual = item
     this.togglePortfolioPopup()
-    this.portfolioDetails(this.actual)
-    let pp:any = this.document.querySelector('.portfolio-popup')
-    pp.scrollTo(0, 0)
+    //this.portfolioDetails(this.actual)
+    //let pp = this.document.querySelector('.portfolio-popup') as HTMLElement
+    //pp.scrollTo(0, 0)
   }
 
   togglePortfolioPopup(){
@@ -106,12 +106,10 @@ export class AppComponent {
     this.document.body.classList.toggle('body-fade-out');
  
   }
-  
 
-  portfolioDetails(actual:PortfolioItem){
+  /*portfolioDetails(actual:PortfolioItem){
     console.log(actual)
-    
-  }
+  }*/
 
   /*scroll(e:any){
     console.log(e.target)
