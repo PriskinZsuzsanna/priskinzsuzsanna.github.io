@@ -45,12 +45,12 @@ export class SiteService {
   isExperience : boolean = false;
   isLanguages : boolean = false;
   isOpenPopup: boolean = false;
-  isThankyou : boolean = false;
   isDark: boolean = false
+  savedMode: string = ""
 
   
   constructor(private router: Router, @Inject(DOCUMENT) private document: Document ){
-    
+    this.getMode()
   }
 
   @HostListener("window:scroll", []) onWindowScroll(){
@@ -104,16 +104,14 @@ export class SiteService {
  
   }
 
-  toggleMain(){
-    this.isThankyou = !this.isThankyou
-  }
-
   toggleMode(){
     this.document.body.classList.toggle("dark");
     if(this.isDark == false){
       this.isDark = true
+      localStorage.setItem('mode', 'dark')
     } else {
       this.isDark = false
+      localStorage.setItem('mode', 'light')
     }
   }
 
@@ -122,6 +120,18 @@ export class SiteService {
       this.document.body.classList.add("dark");
       this.isDark = true
     }
+  }
+
+  getMode(){
+    this.savedMode = JSON.stringify(localStorage.getItem('mode') || '') 
+    console.log(this.savedMode)
+    if(this.savedMode == 'dark'){
+      this.isDark = true
+    } else {
+      this.isDark = false
+      this.document.body.classList.remove("dark")
+    }
+    console.log(this.isDark)
   }
 
 }

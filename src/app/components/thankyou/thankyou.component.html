@@ -1,8 +1,9 @@
-<div class="container thank-you">
+<div class="container thank-you" [ngClass]="dark ? 'dark' : ''">
+  <div class="filter"></div>
     <h1>Köszönjük!</h1>
     <h4>Sikeres Üzenetküldés</h4>
     <div class="button">
-      <button class="hero-btn"><a (click)=this.service.toggleMain()>Vissza a főoldalra</a></button>
+      <button class="hero-btn"><a (click)="backToMain()">Vissza a főoldalra</a></button>
     </div>
     <div class="social hidden">
       <ul>

@@ -10,6 +10,7 @@ import { PortfolioComponent } from './components/portfolio/portfolio.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { PopupComponent } from './components/popup/popup.component';
 import { ThankyouComponent } from './components/thankyou/thankyou.component';
+import { MainComponent } from './components/main/main.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +21,7 @@ import { ThankyouComponent } from './components/thankyou/thankyou.component';
     ContactComponent,
     PopupComponent,
     ThankyouComponent,
+    MainComponent
   ],
   imports: [
     BrowserModule,
