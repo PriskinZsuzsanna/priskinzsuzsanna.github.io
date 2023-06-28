@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Component, HostListener } from '@angular/core';
 import { faBars, faClose, faUserSecret, faGraduationCap, faMagicWandSparkles, faLanguage, faEnvelope, faPhone} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin} from '@fortawesome/free-brands-svg-icons'
-import { faHtml5, faCss3, faJs, faReact, faAngular, faNodeJs, faGit, faBootstrap, faSass } from '@fortawesome/free-brands-svg-icons';
+import { faHtml5, faCss3, faJs, faReact, faAngular, faNodeJs, faGit, faBootstrap, faSass, faGitlab } from '@fortawesome/free-brands-svg-icons';
 import { Router } from '@angular/router'
 import { PORTFOLIO } from './portfolio';
 import { PortfolioItem } from './portfolio-item';
@@ -24,6 +24,7 @@ export class SiteService {
   faMagicWandSparkles = faMagicWandSparkles 
   faLanguage = faLanguage 
   faGithub = faGithub 
+  faGitlab = faGitlab 
   faLinkedin = faLinkedin 
   faEnvelope = faEnvelope 
   faPhone = faPhone 
@@ -95,9 +96,6 @@ export class SiteService {
   OpenPopup(item:PortfolioItem){
     this.actual = item
     this.togglePortfolioPopup()
-    //this.portfolioDetails(this.actual)
-    //let pp = this.document.querySelector('.portfolio-popup') as HTMLElement
-    //pp.scrollTo(0, 0)
   }
 
   togglePortfolioPopup(){
@@ -105,15 +103,6 @@ export class SiteService {
     this.document.body.classList.toggle('body-fade-out');
  
   }
-
-  /*portfolioDetails(actual:PortfolioItem){
-    console.log(actual)
-  }*/
-
-  /*scroll(e:any){
-    console.log(e.target)
-    e.target.parentElement.scrollTo(0, 0)
-  }*/
 
   toggleMain(){
     this.isThankyou = !this.isThankyou

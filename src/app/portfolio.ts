@@ -27,6 +27,14 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         image: "angular-todo.png"
     },
     {
+        title : "Rock Paper Scissors",
+        subtitle : "Angular game",
+        category: "Angular",
+        skills : ["Angular", "Typescript", "Sass/Scss","*ngIf", "keeping scores", "replay", "mobile-first"],
+        url: "https://priskinzsuzsanna.github.io/angular-rock-paper-scissors-frontendmentor/",
+        image: "rock3.png"
+    },
+    {
         title : "Expenses Tracker",
         subtitle : "Angular App",
         category: "angular",
@@ -58,14 +66,6 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         skills : ["Html", "Bootstrap", "Css", "Javascript", "Keyframes", "Animation"],
         url: "https://priskinzsuzsanna.github.io/andrascsaki-homepage/",
         image: "acsaki.png"
-    },
-    {
-        title : "Rock Paper Scissors",
-        subtitle : "Angular game",
-        category: "Angular",
-        skills : ["Angular", "Typescript", "using properties and interpolation","*ngIf", "keeping scores", "showing winner", "replay", "mobile-first"],
-        url: "https://priskinzsuzsanna.github.io/angular-rock-paper-scissors/",
-        image: "angular-rock-paper.png"
     },
     {
         title : "Balett Műhely",
