@@ -2,6 +2,15 @@ import { PortfolioItem } from "./portfolio-item";
 
 export const PORTFOLIO : Array<PortfolioItem> = [
     {
+        title : "CRUD Firebase App",
+        subtitle : "Angular CRUD álláskereső adatbázis",
+        category: "angular",
+        skills : ["Angular", "Typescript", "Firebase", "CRUD", "Api",
+        "Sass/Scss", "Mobile First Workflow", "Keyframes"],
+        url: "https://angular-employee-db.web.app/",
+        image: "employee-crud.png"
+    },
+    {
         title : "react apps",
         subtitle : "React Kezdőlap Feladatlist, Kategorizált Jegyzetek és Szótár Funkciókkal",
         category: "react",
@@ -59,14 +68,14 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         url: "https://priskinzsuzsanna.github.io/angular-blog/",
         image: "blog.png"
     },
-    {
+    /*{
         title : "Musican Homepage",
         subtitle : "Classical Guitarist Landing Page",
         category: "CSS",
         skills : ["Html", "Bootstrap", "Css", "Javascript", "Keyframes", "Animation"],
         url: "https://priskinzsuzsanna.github.io/andrascsaki-homepage/",
         image: "acsaki.png"
-    },
+    },*/
     {
         title : "Balett Műhely",
         subtitle : "Landing Page",
