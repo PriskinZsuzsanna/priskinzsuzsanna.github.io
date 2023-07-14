@@ -7,7 +7,7 @@
         <div *ngFor="let item of this.service.portfolio" class="portfolio-item hidden">
           <div class="portfolio-item-thumbnail">
             <a href="{{item.url}}" target="_blank">Live Site</a>
-            <img src="assets/img/{{item.image}}" alt="{{item.title}} oldal thumbnail">
+            <img src="assets/images/{{item.image}}" alt="{{item.title}} oldal thumbnail">
           </div>
           <h3 class="portfolio-item-title">{{item.title}}</h3>
           <button (click)="this.service.OpenPopup(item)" type="button" class="btn view-project-btn">info</button>

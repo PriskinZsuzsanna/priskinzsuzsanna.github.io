@@ -2,13 +2,21 @@ import { PortfolioItem } from "./portfolio-item";
 
 export const PORTFOLIO : Array<PortfolioItem> = [
     {
-        title : "CRUD Firebase App",
+        title : "CRUD Firebase React-ts App",
+        subtitle : "React CRUD hotel adatbázis",
+        category: "react",
+        skills : ["React", "Typescript", "Firebase", "CRUD", "Authentication", "Rest Api", "Mobile First Workflow"],
+        url: "https://react-ts-hotels.web.app/",
+        image: "hotel.png"
+    },
+    {
+        title : "CRUD Firebase Angular-ts App",
         subtitle : "Angular CRUD álláskereső adatbázis",
         category: "angular",
-        skills : ["Angular", "Typescript", "Firebase", "CRUD", "Api",
+        skills : ["Angular", "Typescript", "Firebase", "CRUD", "Rest Api",
         "Sass/Scss", "Mobile First Workflow", "Keyframes"],
         url: "https://angular-employee-db.web.app/",
-        image: "employee-crud.png"
+        image: "employee.png"
     },
     {
         title : "react apps",
@@ -33,7 +41,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         category: "angular",
         skills : ["Angular", "Typescript", "Add", "Delete", "Mark as done", "Filter", "CDK-DragDropModule", "Sass/Scss", "Light-Dark: change mode and detect mode", "local storage"],
         url: "https://priskinzsuzsanna.github.io/angular-todo-frontendmentor/",
-        image: "angular-todo.png"
+        image: "todo.png"
     },
     {
         title : "Rock Paper Scissors",
@@ -41,7 +49,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         category: "Angular",
         skills : ["Angular", "Typescript", "Sass/Scss","*ngIf", "keeping scores", "replay", "mobile-first"],
         url: "https://priskinzsuzsanna.github.io/angular-rock-paper-scissors-frontendmentor/",
-        image: "rock3.png"
+        image: "rock.png"
     },
     {
         title : "Expenses Tracker",
@@ -60,6 +68,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         url: "https://priskinzsuzsanna.github.io/FrontendMentor-SCSS-Sunnyside-Landing-Page/",
         image: "dictionary.png"
     },
+    /*
     {
         title : "Blog",
         subtitle : "Angular Blog",
@@ -68,7 +77,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         url: "https://priskinzsuzsanna.github.io/angular-blog/",
         image: "blog.png"
     },
-    /*{
+    {
         title : "Musican Homepage",
         subtitle : "Classical Guitarist Landing Page",
         category: "CSS",

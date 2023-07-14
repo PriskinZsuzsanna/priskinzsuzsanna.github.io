@@ -27,6 +27,7 @@
             transition: all .3s ease-in;
             overflow: hidden;
             cursor: pointer;
+            box-shadow: 1px 1px 4px var(--primary-alpha);
         }
         
         .portfolio-item-thumbnail a {
@@ -54,6 +55,7 @@
     .portfolio-item-thumbnail img {
         width: 100%;
         border-radius: 10px;
+        display: block;
         pointer-events: none;
     }
     
