@@ -65,7 +65,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         category: "Javascript: Object Oriented Programing",
         skills : ["Javascript", "OOP", "Api", "Local Storage",
         "Light-Dark Theme", "Playing Audio", "Show-Hide Elements"],
-        url: "https://priskinzsuzsanna.github.io/FrontendMentor-SCSS-Sunnyside-Landing-Page/",
+        url: "https://priskinzsuzsanna.github.io/OOP-Dictionary/",
         image: "dictionary.png"
     },
     /*

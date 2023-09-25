@@ -142,7 +142,7 @@ section {
 nav {
     opacity: 0;
     animation: navFadeIn 2s ease-in-out;
-    animation-delay: 1s;
+    animation-delay: .6s;
     animation-fill-mode: forwards;
 }
 
@@ -163,7 +163,7 @@ nav {
             translate: -100% 60%;
             opacity: 0;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .6s;
         }
 
         &:nth-of-type(2) {
@@ -171,7 +171,7 @@ nav {
             translate: -30% -100%;
             opacity: 0;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .6s;
         }
 
         &:nth-of-type(3) {
@@ -179,7 +179,7 @@ nav {
             translate: 30% -100%;
             opacity: 0;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .6s;
         }
 
         &:nth-of-type(4) {
@@ -187,7 +187,7 @@ nav {
             translate: 100% -60%;
             opacity: 0;
             animation-fill-mode: forwards;
-            animation-delay: 1s;
+            animation-delay: .6s;
         }
     }
 }
