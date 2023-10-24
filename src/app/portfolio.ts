@@ -2,7 +2,7 @@ import { PortfolioItem } from "./portfolio-item";
 
 export const PORTFOLIO : Array<PortfolioItem> = [
     {
-        title : "CRUD Firebase React-ts App",
+        title : "CRUD Firebase React-typescript App",
         subtitle : "React CRUD hotel adatbázis",
         category: "react",
         skills : ["React", "Typescript", "Firebase", "CRUD", "Authentication", "Rest Api", "Mobile First Workflow"],
@@ -10,13 +10,21 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         image: "hotel.png"
     },
     {
-        title : "CRUD Firebase Angular-ts App",
+        title : "CRUD Firebase Angular-typescript App",
         subtitle : "Angular CRUD álláskereső adatbázis",
         category: "angular",
         skills : ["Angular", "Typescript", "Firebase", "CRUD", "Rest Api",
         "Sass/Scss", "Mobile First Workflow", "Keyframes"],
         url: "https://angular-employee-db.web.app/",
         image: "employee.png"
+    },
+    {
+        title : "Multy-Step react-typescript form",
+        subtitle : "React Typescript Multy Step Form",
+        category: "react",
+        skills : ["React", "Typescript", "Following Frontend Mentor Design", "Mobile First Workflow"],
+        url: "https://priskinzsuzsanna.github.io/ts-react-multystepform/",
+        image: "multi-step.png"
     },
     {
         title : "react apps",
@@ -77,14 +85,7 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         url: "https://priskinzsuzsanna.github.io/angular-blog/",
         image: "blog.png"
     },
-    {
-        title : "Musican Homepage",
-        subtitle : "Classical Guitarist Landing Page",
-        category: "CSS",
-        skills : ["Html", "Bootstrap", "Css", "Javascript", "Keyframes", "Animation"],
-        url: "https://priskinzsuzsanna.github.io/andrascsaki-homepage/",
-        image: "acsaki.png"
-    },*/
+    */
     {
         title : "Balett Műhely",
         subtitle : "Landing Page",
@@ -92,5 +93,22 @@ export const PORTFOLIO : Array<PortfolioItem> = [
         skills : ["Html", "Bootstrap", "Css", "Javascript", "Keyframes", "Animation"],
         url: "https://priskinzsuzsanna.github.io/Bootstrap-Balett-LandingPage/",
         image: "balett.png"
+    },
+    {
+        title : "Musican Homepage",
+        subtitle : "Classical Guitarist Landing Page",
+        category: "CSS",
+        skills : ["Html","Scss", "Javascript", "Keyframes", "Animation", "C-Panel Hosting"],
+        url: "https://andrascsaki.com",
+        image: "csaki.png"
+    },
+   
+    {
+        title : "Huddle Landing Page",
+        subtitle : "Landing Page",
+        category: "CSS",
+        skills : ["Html", "Css", "Javascript",  "Following Frontend Mentor Design"],
+        url: "https://priskinzsuzsanna.github.io/FrontendMentorProject-huddle-landing-page/",
+        image: "huddle.png"
     },
 ]
